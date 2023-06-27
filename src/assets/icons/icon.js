@@ -8,6 +8,7 @@ import unacceptable from './unacceptable.svg';
 import issues from './issues.svg';
 import dailyReport from './dailyReport.svg';
 import scan from './scan.svg';
+import search from './search.svg';
 
 export {
     logout,
@@ -19,5 +20,6 @@ export {
     unacceptable,
     issues,
     dailyReport,
-    scan
+    scan,
+    search
 };
