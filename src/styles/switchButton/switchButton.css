@@ -1,0 +1,11 @@
+
+:where(.css-dev-only-do-not-override-1wazalj).ant-switch.ant-switch-checked{
+  background-color: rgb(24, 227, 24);
+  box-shadow: none
+}
+:where(.css-dev-only-do-not-override-1wazalj).ant-switch.ant-switch-checked:hover:not(.ant-switch-disabled){
+  background: rgb(24, 227, 24);
+}
+:where(.css-dev-only-do-not-override-1wazalj).ant-switch .ant-switch-handle::after{
+  box-shadow:none 
+}
