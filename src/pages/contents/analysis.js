@@ -5,7 +5,7 @@ import Contents from "./contents";
 function Analysis() {
   return (
     <div>
-      <NavbarContent title="Donor Analysis" item="Button" />
+      <NavbarContent title={<span className="h2-bold-size24">Donor Analysis</span>} item="Button" />
       <Contents content="Analysis" />
     </div>
   );

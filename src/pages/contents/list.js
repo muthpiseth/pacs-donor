@@ -5,7 +5,7 @@ import Contents from "./contents";
 function List() {
   return (
     <div>
-      <NavbarContent title="Donor List" item="Button" />
+      <NavbarContent title={<span className="h2-bold-size24">Donor List</span>} item="Button" />
       <Contents content="List" />
     </div>
   );
