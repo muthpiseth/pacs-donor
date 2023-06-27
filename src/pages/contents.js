@@ -15,7 +15,7 @@ function Contents(props) {
     <div>
       {/* {content} */}
     </div>
-    <div className="bg-white p-4"
+    <div className=" p-4"
       style={{
         minHeight: "29rem"
       }}
@@ -25,5 +25,4 @@ function Contents(props) {
     </>
   )
 }
-
 export default Contents
