@@ -1,7 +1,7 @@
 import logout from './logout.svg';
 import dashboard from './dashboard.svg';
 import donor from './donor.svg';
-import appointment from './appointment.svg';
+import Appointment from './appointment.svg';
 import overview from './overview.svg';
 import queueList from './queueList.svg';
 import unacceptable from './unacceptable.svg';
@@ -14,7 +14,7 @@ export {
     logout,
     dashboard,
     donor,
-    appointment,
+    Appointment,
     overview,
     queueList,
     unacceptable,

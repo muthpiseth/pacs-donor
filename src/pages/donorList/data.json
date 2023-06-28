@@ -1,0 +1,30 @@
+[
+    {
+        "createDate":"01-11-2019",
+        "category":"sell",
+        "amount": 1000.00,
+        "description": "Pay from work",
+        "paymentMethod":"Wing",
+        "reference":"N/A",
+        "remark":"payment",
+        "tag": "work"
+    },    {
+        "createDate":"15-02-2021",
+        "category":"work",
+        "amount": 4000.00,
+        "description": "Pay from sell",
+        "paymentMethod":"Aceleda",
+        "reference":"N/A",
+        "remark":"payment",
+        "tag": "work"
+    },    {
+        "createDate":"09-02-2023",
+        "category":"Salory",
+        "amount": 90000.00,
+        "description": "Pay from business",
+        "paymentMethod":"ABA",
+        "reference":"N/A",
+        "remark":"Business",
+        "tag": "Business"
+    }
+]

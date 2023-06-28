@@ -9,7 +9,7 @@ function Contents(props) {
         marginBottom: "1.5rem"
       }}
     >
-      <div>Header</div>
+      <div>Donor List </div>
       <div>button</div>
     </div>
     <div>
