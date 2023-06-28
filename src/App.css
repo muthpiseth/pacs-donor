@@ -43,3 +43,115 @@ body {
     font-family: 'montserrat';
 }
 
+/* Font Size */
+.h1-bold-size32 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #152C5B;
+}
+.h1-bold-size32-grey {
+    font-size: 32px;
+    font-weight: 700;
+    color: #152C5B;
+    opacity: 40%;
+}
+.h2-bold-size24 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #152C5B;
+}
+.h2-bold-size24-grey {
+    font-size: 24px;
+    font-weight: 600;
+    color: #152C5B;
+    opacity: 40%;
+}
+.h2-bold-size20 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #152C5B;
+}
+.h2-bold-size20-grey {
+    font-size: 20px;
+    font-weight: 600;
+    color: #152C5B;
+    opacity: 40%;
+}
+.h3-bold-size18 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #152C5B;
+}
+.h3-bold-size18-grey {
+    font-size: 18px;
+    font-weight: 500;
+    color: #152C5B;
+    opacity: 40%;
+}
+.h3-bold-size17 {
+    font-size: 17px;
+    font-weight: 500;
+    color: #152C5B;
+}
+.h3-bold-size17-grey {
+    font-size: 17px;
+    font-weight: 500;
+    color: #152C5B;
+    opacity: 40%;
+}
+.h4-bold-size16 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #152C5B;
+}
+.h4-bold-size16-grey {
+    font-size: 16px;
+    font-weight: 500;
+    color: #152C5B;
+    opacity: 40%;
+}
+.h4-bold-size14 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #152C5B;
+}
+.h4-bold-size14-grey {
+    font-size: 14px;
+    font-weight: 500;
+    color: #152C5B;
+    opacity: 40%;
+}
+.h5-bold-size13 {
+    font-size: 13px;
+    font-weight: 500;
+    color: #152C5B;
+}
+.h5-bold-size13-grey {
+    font-size: 13px;
+    font-weight: 500;
+    color: #152C5B;
+    opacity: 40%;
+}
+.h6-size12 {
+    font-size: 12px;
+    font-weight: 400;
+    color: #152C5B;
+}
+.h6-size12-grey {
+    font-size: 12px;
+    font-weight: 400;
+    color: #152C5B;
+    opacity: 40%;
+}
+.small-size11 {
+    font-size: 11px;
+    font-weight: 400;
+    color: #152C5B;
+}
+.small-size11-grey {
+    font-size: 11px;
+    font-weight: 400;
+    color: #152C5B;
+    opacity: 40%;
+}
+

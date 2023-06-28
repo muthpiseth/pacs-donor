@@ -79,35 +79,35 @@ const Sidebar = (props) => {
               {
                 key: "donor",
                 icon: <TeamOutlined />,
-                label: <div className="label">Donor</div>,
+                label: <div className="h5-bold-size13">Donor</div>,
                 children: [
                   {
                     key: "/",
                     icon: <UnorderedListOutlined />,
-                    label: <div className="label">Donor List</div>,
+                    label: <div className="h5-bold-size13">Donor List</div>,
                   },
                   {
                     key: "/group",
                     icon: <UsergroupAddOutlined />,
-                    label: <div className="label">Donor Group</div>
+                    label: <div className="h5-bold-size13">Donor Group</div>
                   },
                   {
                     key: "/analysis",
                     icon: <LineChartOutlined />,
-                    label: <div className="label">Donor Analysis</div>
+                    label: <div className="h5-bold-size13">Donor Analysis</div>
                   }
                 ]
               },
               {
                 key: "payout",
                 icon: <VideoCameraOutlined />,
-                label: <div className="label">Payout</div>,
+                label: <div className="h5-bold-size13">Payout</div>,
                 children: []
               },
               {
                 key: "rewards",
                 icon: <UploadOutlined />,
-                label: <div className="label">Rewards</div>,
+                label: <div className="h5-bold-size13">Rewards</div>,
                 children: []
               },
             ]}
@@ -154,24 +154,23 @@ const Sidebar = (props) => {
             />
             <div className="d-flex justify-content-between w-100 align-items-center">
               <div>
-                <Button className="search-button" type="text" icon={<img src={search} alt="" />}>Search</Button>
+                <Button className="search-button" type="text" icon={<img src={search} alt="" />}><span className="h3-bold-size18-grey">Search</span></Button>
               </div>
               <div className="d-flex align-items-center me-3">
                 <div className="d-flex align-items-center">
                   <img style={{ height: "1.5rem" }} src={clock} alt="" />
                   <Clock
-                    className="date ms-lg-2 ms-md-1"
+                    className="h4-bold-size16 ms-lg-2 ms-md-1"
                     format={'D / MM / YYYY'}
                     ticking={true}
                   />
                   <Clock
-                    className="time ms-lg-3 ms-md-1"
+                    className="h4-bold-size16 ms-lg-3 ms-md-1"
                     format={'h:mm'}
                     ticking={true}
                   />
                   <Clock
-                    className="ms-lg-1 ms-md-1"
-                    style={{ fontSize: "0.8rem", fontWeight: "500", color: "#152C5B", opacity: "50%" }}
+                    className="h5-bold-size13-grey ms-lg-1 ms-md-1"
                     format={'A'}
                     ticking={true}
                   />

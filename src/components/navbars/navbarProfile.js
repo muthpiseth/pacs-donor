@@ -3,12 +3,12 @@ import React from 'react'
 import { Dropdown } from 'antd';
 const items = [
     {
-      label: 'Account Settings',
-      key: '1',
+      label: <span className="h5-bold-size13">Account Settings</span>,
+      key: 1,
     },
     {
-      label: 'Sign Out',
-      key: '2',
+      label: <span className="h5-bold-size13">Sign Out</span>,
+      key: 2,
     }
 ];
 
@@ -18,8 +18,8 @@ function NavbarProfile(props) {
     <div className="d-flex justify-content-center align-items-center">
         <div className="me-lg-4 me-md-2 d-flex fs-4">{icon}</div>
         <div className={className}>
-            <div id="name" style={{ fontSize: "1rem", fontWeight: "500", color: "#152C5B" }}>{name}</div>
-            <div id="position" style={{ fontSize: "0.8rem", fontWeight: "500", color: "#152C5B", opacity: "50%" }}>{position}</div>
+            <div id="name" className="h3-bold-size17">{name}</div>
+            <div id="position" className="h5-bold-size13-grey">{position}</div>
         </div>
         <div className="mx-lg-3 mx-md-1">
             <img 
@@ -29,6 +29,7 @@ function NavbarProfile(props) {
               alt="" 
             />
             <Dropdown
+              overlayStyle={{ top: "4rem" }}
               menu={{
               items,
               }}

@@ -5,7 +5,7 @@ import Contents from "./contents";
 function Group() {
   return (
     <div>
-      <NavbarContent title="Donor Group" item="Button" />
+      <NavbarContent title={<span className="h2-bold-size24">Donor Group</span>} item="Button" />
       <Contents content="Group" />
     </div>
   );

@@ -3,45 +3,45 @@ import React from "react";
 
 const items = [
   {
-    label: "Home",
-    key: "1",
+    label: <span className="h5-bold-size13">Home</span>,
+    key: 1,
   },
   {
-    label: "Daily Operation",
-    key: "2",
+    label: <span className="h5-bold-size13">Daily Operation</span>,
+    key: 2,
   },
   {
-    label: "Donor",
-    key: "3",
+    label: <span className="h5-bold-size13">Donor</span>,
+    key: 3,
   },
   {
-    label: "Unit & Sample",
-    key: "4",
+    label: <span className="h5-bold-size13">Unit & Sample</span>,
+    key: 4,
   },
   {
-    label: "Marketing",
-    key: "5",
+    label: <span className="h5-bold-size13-grey">Marketing</span>,
+    key: 5,
     disabled: true
   },
   {
-    label: "Equipment & Supplies",
-    key: "6",
+    label: <span className="h5-bold-size13">Equipment & Supplies</span>,
+    key: 6,
   },
   {
-    label: "Site",
-    key: "7",
+    label: <span className="h5-bold-size13">Site</span>,
+    key: 7,
   },
   {
-    label: "System Setup",
-    key: "8",
+    label: <span className="h5-bold-size13">System Setup</span>,
+    key: 8,
   },
   {
-    label: "Employee",
-    key: "9",
+    label: <span className="h5-bold-size13">Employee</span>,
+    key: 9,
   },
   {
-    label: "Report",
-    key: "10",
+    label: <span className="h5-bold-size13-grey">Report</span>,
+    key: 10,
     disabled: true
   },
 ];
