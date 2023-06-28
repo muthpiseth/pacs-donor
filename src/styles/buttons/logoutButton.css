@@ -1,0 +1,9 @@
+.logout-button {
+    color: #152C5B;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.logout-button:hover {
+    background: none !important;
+    color: #152C5B !important;
+}
