@@ -1,0 +1,18 @@
+.DonorListForm {
+    background: #F6F6F9;
+    border-radius: 0.2rem;
+
+}
+
+.ant-table-wrapper .ant-table-pagination {
+    display: none;
+}
+
+:where(.css-dev-only-do-not-override-1wazalj).ant-table-wrapper .ant-table-thead>tr>th {
+    border-bottom: 0;
+
+}
+
+:where(.css-dev-only-do-not-override-1wazalj).ant-table-wrapper .ant-table-thead>tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+    position: relative;
+}

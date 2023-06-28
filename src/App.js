@@ -5,6 +5,7 @@ import MainLayout from './components/layouts/mainLayout';
 import List from './pages/contents/list';
 import Group from './pages/contents/group';
 import Analysis from './pages/contents/analysis';
+import CardDonor from './pages/viewDonorChart/cardDonor';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route element={<ViewLayout />}>
           <Route path="/home" element={<List />}/>
+          <Route path="/cardDonor" element={<CardDonor/>}/>
         </Route>
         <Route element={<MainLayout />}>
           <Route path="/" element={<List />}/>
