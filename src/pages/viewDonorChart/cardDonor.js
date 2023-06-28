@@ -26,35 +26,35 @@ import {
   Survey,
   TransferDonor,
   Transfers,
-  appointment,
-  collections,
-  consents,
-  crossdonationchecks,
-  deferrais,
-  finger,
-  iconBack,
-  iconbody,
-  immunizations,
-  itmeimg,
-  legacyinformation,
-  medications,
-  moreicon,
-  physicais,
-  questionnaires,
-  rbclosses,
-  reactions,
-  reviews,
-  samples,
-  screening,
-  testresuits,
-  visits,
+  Collections,
+  Consents,
+  Crossdonationchecks,
+  Deferrais,
+  Finger,
+  IconBack,
+  Iconbody,
+  Immunizations,
+  Itmeimg,
+  Legacyinformation,
+  Medications,
+  Moreicon,
+  Physicais,
+  Questionnaires,
+  Rbclosses,
+  Reactions,
+  Reviews,
+  Samples,
+  Screening,
+  Testresuits,
+  Visits,
+  AppointmentHearder
 } from "../../assets/images";
 import BackgroundButton from "../../components/buttons/backgroundButton";
 const CardDonor = () => {
   const [data, setData] = useState({
     item: [
       {
-        urlimg: <img src={Appointment} alt="" />,
+        urlimg: <img src={AppointmentHearder} alt="" />,
         texttitle: "Appointment",
       },
       {
@@ -97,7 +97,7 @@ const CardDonor = () => {
       },
 
       {
-        Texticon: <img src={finger} alt="" />,
+        Texticon: <img src={Finger} alt="" />,
         Texttitle: "Biological Record",
       },
 
@@ -146,75 +146,75 @@ const CardDonor = () => {
     ],
     itemChart: [
       {
-        IconChart: <img src={iconbody} alt="" />,
+        IconChart: <img src={Iconbody} alt="" />,
         TitleChart: "Body Map",
       },
       {
-        IconChart: <img src={physicais} alt="" />,
+        IconChart: <img src={Physicais} alt="" />,
         TitleChart: "Physicais",
       },
       {
-        IconChart: <img src={samples} alt="" />,
+        IconChart: <img src={Samples} alt="" />,
         TitleChart: "Samples",
       },
       {
-        IconChart: <img src={medications} alt="" />,
+        IconChart: <img src={Medications} alt="" />,
         TitleChart: "Medications",
       },
       {
-        IconChart: <img src={screening} alt="" />,
+        IconChart: <img src={Screening} alt="" />,
         TitleChart: "Screening Test ",
       },
       {
-        IconChart: <img src={testresuits} alt="" />,
+        IconChart: <img src={Testresuits} alt="" />,
         TitleChart: "Test Resuits",
       },
       {
-        IconChart: <img src={collections} alt="" />,
+        IconChart: <img src={Collections} alt="" />,
         TitleChart: "Collections",
       },
       {
-        IconChart: <img src={immunizations} alt="" />,
+        IconChart: <img src={Immunizations} alt="" />,
         TitleChart: "Immunizations",
       },
       {
-        IconChart: <img src={visits} alt="" />,
+        IconChart: <img src={Visits} alt="" />,
         TitleChart: "Visits",
       },
       {
-        IconChart: <img src={rbclosses} alt="" />,
+        IconChart: <img src={Rbclosses} alt="" />,
         TitleChart: "RBC Losses",
       },
       {
-        IconChart: <img src={deferrais} alt="" />,
+        IconChart: <img src={Deferrais} alt="" />,
         TitleChart: "Deferrals",
       },
       {
-        IconChart: <img src={reactions} alt="" />,
+        IconChart: <img src={Reactions} alt="" />,
         TitleChart: "Reactions",
       },
       {
-        IconChart: <img src={reviews} alt="" />,
+        IconChart: <img src={Reviews} alt="" />,
         TitleChart: "Reviews",
       },
       {
-        IconChart: <img src={questionnaires} alt="" />,
+        IconChart: <img src={Questionnaires} alt="" />,
         TitleChart: "Questionnaires",
       },
       {
-        IconChart: <img src={consents} alt="" />,
+        IconChart: <img src={Consents} alt="" />,
         TitleChart: "Consents",
       },
       {
-        IconChart: <img src={appointment} alt="" />,
+        IconChart: <img src={Appointment} alt="" />,
         TitleChart: "Appointment",
       },
       {
-        IconChart: <img src={crossdonationchecks} alt="" />,
+        IconChart: <img src={Crossdonationchecks} alt="" />,
         TitleChart: "Cross Donation Checks",
       },
       {
-        IconChart: <img src={legacyinformation} alt="" />,
+        IconChart: <img src={Legacyinformation} alt="" />,
         TitleChart: "Legacy Information",
       },
     ],
@@ -235,9 +235,8 @@ const CardDonor = () => {
           textDecoration: "none",
         }}
       >
-        {" "}
         <h4>
-          <img src={iconBack} /> View Donor Chart
+          <img src={IconBack} /> View Donor Chart
         </h4>
       </a>
       <div className="row mt-4">
@@ -255,15 +254,20 @@ const CardDonor = () => {
                 Guy Hawkins
               </h5>
               <BackgroundButton
+                tittle="Check-out"
+                className="float-end ms-3"
+                width="120px"
+              />
+              <BackgroundButton
                 tittle="Check-in"
-                className="float-end"
+                className="float-end "
                 width="100px"
               />
             </div>
             <div className="CardProfile d-flex  mt-2  ">
               <div className="card border-0 me-3">
                 <div className="ovrlay">
-                  <img src={itmeimg} alt="..." />
+                  <img src={Itmeimg} alt="..." />
                   <div className="item-ovrlay">
                     <div>
                       <p className="text-primary">
@@ -491,7 +495,7 @@ const CardDonor = () => {
                   2
                 </span>
                 <a style={{ fontSize: "15px" }} href="">
-                  More <img src={moreicon} />
+                  More <img src={Moreicon} />
                 </a>
               </div>
               <div className="col-lg-6  ClassNameP d-flex  justify-content-end">

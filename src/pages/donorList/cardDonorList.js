@@ -6,7 +6,6 @@ import "./donorList.css";
 import { Pagination } from "antd";
 import FilterForm from "../../components/filterForm";
 const handleChange = (value) => {
-  console.log(value);
 };
 const CardDonorList = () => {
   return (
