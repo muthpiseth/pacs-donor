@@ -5,13 +5,19 @@ import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
 import { GrStatusGoodSmall } from "react-icons/gr";
 import SwitchButton from "../../components/switchButton/switchButton";
 import Configure from "./configure";
-import ModalDonor from "../../containers/modalDonorGroup/modalDonor";
 import ModalConfigure from "../../containers/modalDonorGroup/modalConfigure";
+import ModalLapsed from "../../containers/modalDonorGroup/modalLapsed";
+import ModalSpecial from "../../containers/modalDonorGroup/modalSpecial";
+import ModalAge from "../../containers/modalDonorGroup/modalAge";
 const DonorGroup = () => {
   const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
   const [showConfigure, setShowConfigure] = useState(false);
   const handleShowConfigure = () => setShowConfigure(true);
+  const [showLapsed, setShowLapsed] = useState(false);
+  const handlShowLapsed = () => setShowLapsed(true);
+  const [showSpecial, setShowSpecial] = useState(false);
+  const handlShowSpecial = () => setShowSpecial(true);
   return (
     <>
       <div>
@@ -22,11 +28,11 @@ const DonorGroup = () => {
               <div className="d-flex justify-content-between aligns-items-center">
                 <span className="tittle-content">Donor Age Group</span>
                 <div onClick={handleShow}>
-                <BackgroundButton
-                  width="6rem"
-                  height="2rem"
-                  tittle="Create"
-                />
+                  <BackgroundButton
+                    width="6rem"
+                    height="2rem"
+                    tittle="Create"
+                  />
                 </div>
               </div>
               <div className="row gx-0 d-flex justify-content-between align-items-center p-2 px-3 mt-3 donor-border">
@@ -44,8 +50,8 @@ const DonorGroup = () => {
                     <span className=" me-3 icon-delete">
                       <AiOutlineDelete />
                     </span>
-                    <div >
-                      <SwitchButton className="switchButton " />
+                    <div>
+                      <SwitchButton className="switchButton" />
                     </div>
                   </div>
                 </div>
@@ -62,10 +68,10 @@ const DonorGroup = () => {
                     <span className=" me-3 icon-edit">
                       <AiOutlineEdit />
                     </span>
-                    <span className=" me-3 icon-delete">
+                    <span className="me-3 icon-delete">
                       <AiOutlineDelete />
                     </span>
-                    <div >
+                    <div>
                       <SwitchButton className="switchButton " />
                     </div>
                   </div>
@@ -75,10 +81,16 @@ const DonorGroup = () => {
           </div>
           {/* Lapsed Donor */}
           <div className="col-6">
-            <div className="bg-white p-3  lapsed-group">
-              <div className="d-flex justify-content-between  aligns-items-center">
+            <div className="bg-white p-3 lapsed-group">
+              <div className="d-flex justify-content-between aligns-items-center">
                 <span className="tittle-content">Lapsed Donor Group</span>
-                <BackgroundButton width="6rem" height="2rem" tittle="Create" />
+                <div onClick={handlShowLapsed}>
+                  <BackgroundButton
+                    width="6rem"
+                    height="2rem"
+                    tittle="Create"
+                  />
+                </div>
               </div>
               <div className="row gx-0 d-flex justify-content-between align-items-center p-2 px-3 mt-3 donor-border ">
                 <div className="col-6 d-flex">
@@ -97,7 +109,7 @@ const DonorGroup = () => {
                       <AiOutlineDelete />
                     </span>
                     <div>
-                      <SwitchButton className="switchButton " />
+                      <SwitchButton className="switchButton" />
                     </div>
                   </div>
                 </div>
@@ -106,12 +118,14 @@ const DonorGroup = () => {
           </div>
         </div>
         {/* Special donor group */}
-        <div className="bg-white p-3 mt-3 donor-group ">
-          <div className="d-flex justify-content-between  aligns-items-center">
+        <div className="bg-white p-3 mt-3 donor-group">
+          <div className="d-flex justify-content-between aligns-items-center">
             <span className="tittle-content"> Special Donor Group</span>
-            <BackgroundButton width="6rem" height="2rem" tittle="Create" />
+            <div onClick={handlShowSpecial}>
+              <BackgroundButton width="6rem" height="2rem" tittle="Create" />
+            </div>
           </div>
-          <div className="row p-2 px-3 mt-3 gx-0 donor-border ">
+          <div className="row p-2 px-3 mt-3 gx-0 donor-border">
             <div className="col-2">
               <div className="text-special">
                 <p>Group Name :</p>
@@ -135,8 +149,8 @@ const DonorGroup = () => {
             <div className="col-2 ">
               <span className="text-special">Group Members:</span>
             </div>
-            <div className="col-10 text-box ">
-              <div className="number_contain me-3">
+            <div className="col-10 text-box">
+              <div className="number-contain me-3">
                 <p>D2244848</p>
                 <p>D2244848</p>
                 <p>D2244848</p>
@@ -167,7 +181,7 @@ const DonorGroup = () => {
               </div>
               <div>
                 <div className="row gx-0 d-flex align-items-center justify-content-between p-2 px-3 mt-3 donor-border">
-                  <div className="col-5 ">
+                  <div className="col-5">
                     <div>
                       <span className="text-h6 me-2 text-danger">
                         <GrStatusGoodSmall />
@@ -189,7 +203,7 @@ const DonorGroup = () => {
                     </div>
                   </div>
                 </div>
-                <div className="row gx-0 d-flex align-items-center justify-content-between p-2 px-3  mt-3 donor-border">
+                <div className="row gx-0 d-flex align-items-center justify-content-between p-2 px-3 mt-3 donor-border">
                   <div className="col-5 ">
                     <div>
                       <span className="text-h6 me-2 text-success">
@@ -204,7 +218,7 @@ const DonorGroup = () => {
                     <span className="text-h5 ms-2">60</span>
                     <span className="text ms-2">days</span>
                   </div>
-                  <div className="col-1  d-flex justify-content-end ">
+                  <div className="col-1 d-flex justify-content-end ">
                     <div>
                       <span className="icon-edit">
                         <AiOutlineEdit />
@@ -247,7 +261,7 @@ const DonorGroup = () => {
               desc="Campaign attended within"
               day="365"
               typeDate="days"
-             onClick={handleShowConfigure}
+              onClick={handleShowConfigure}
             />
           </div>
         </div>
@@ -274,8 +288,13 @@ const DonorGroup = () => {
           </div>
         </div>
       </div>
-      <ModalDonor open={show}/>
-      <ModalConfigure showConfigure={showConfigure}/>
+      <ModalAge isOpen={show} />
+      <ModalConfigure
+        isOpen={showConfigure}
+        tittleConfigure="Create Campaign Activeness"
+      />
+      <ModalLapsed isOpen={showLapsed} />
+      <ModalSpecial isOpen={showSpecial} />
     </>
   );
 };
