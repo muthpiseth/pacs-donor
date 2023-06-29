@@ -3,17 +3,17 @@ import { AiOutlinePlus, AiOutlineSearch } from "react-icons/ai";
 import BackgroundButton from "../../components/buttons/backgroundButton";
 const { TextArea } = Input;
 const ModalSpecial = (props) => {
-  const { isOpen } = props;
+  const { isOpen, handleCancel } = props;
   return (
     <>
-      <Modal open={isOpen} width="43.75rrem" footer={null}>
+      <Modal open={isOpen} width="43.75rem" footer={null} onCancel={handleCancel}>
         <div className="p-5">
-          <div className="text-center mb-4">
-            <h4>Create Special donore</h4>
+          <div className="text-center mb-4 h2-bold-size20">
+            Create Special Donor Group
           </div>
           <div className="row d-flex align-items-center">
-            <div className="col-3">
-              <label>Group Name</label>
+            <div className="col-3 h4-bold-size15-grey">
+              Group Name
             </div>
             <div className="col-9">
               <Input style={{ width: "100%" }} />
@@ -21,7 +21,7 @@ const ModalSpecial = (props) => {
           </div>
           <div className="row mt-4 d-flex align-items-center">
             <div className="col-3">
-              <span style={{ fontSize: "1rem", fontWeight: "700" }}>
+              <span className="h4-bold-size16">
                 Select Donors
               </span>
             </div>

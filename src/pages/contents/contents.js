@@ -6,7 +6,7 @@ function Contents(props) {
     <div
       className="p-4"
       style={{
-        minHeight:"29rem",
+        minHeight: "28.8rem",
         borderRadius: "0.5rem",
       }}
     >

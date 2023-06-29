@@ -12,9 +12,6 @@ function Contents(props) {
       <div>Donor List </div>
       <div>button</div>
     </div>
-    <div>
-      {/* {content} */}
-    </div>
     <div className=" p-4"
       style={{
         minHeight: "29rem"

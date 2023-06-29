@@ -11,13 +11,13 @@ import ModalSpecial from "../../containers/modalDonorGroup/modalSpecial";
 import ModalAge from "../../containers/modalDonorGroup/modalAge";
 const DonorGroup = () => {
   const [show, setShow] = useState(false);
-  const handleShow = () => setShow(true);
+  const handleShow = () => {show === false ? setShow(true) : setShow(false)};
   const [showConfigure, setShowConfigure] = useState(false);
-  const handleShowConfigure = () => setShowConfigure(true);
+  const handleShowConfigure = () => {showConfigure === false ? setShowConfigure(true) : setShowConfigure(false)};
   const [showLapsed, setShowLapsed] = useState(false);
-  const handlShowLapsed = () => setShowLapsed(true);
+  const handleShowLapsed = () => {showLapsed === false ? setShowLapsed(true) : setShowLapsed(false)};
   const [showSpecial, setShowSpecial] = useState(false);
-  const handlShowSpecial = () => setShowSpecial(true);
+  const handleShowSpecial = () => {showSpecial === false ? setShowSpecial(true) : setShowSpecial(false)};
   return (
     <>
       <div>
@@ -84,7 +84,7 @@ const DonorGroup = () => {
             <div className="bg-white p-3 lapsed-group">
               <div className="d-flex justify-content-between aligns-items-center">
                 <span className="tittle-content">Lapsed Donor Group</span>
-                <div onClick={handlShowLapsed}>
+                <div onClick={handleShowLapsed}>
                   <BackgroundButton
                     width="6rem"
                     height="2rem"
@@ -121,7 +121,7 @@ const DonorGroup = () => {
         <div className="bg-white p-3 mt-3 donor-group">
           <div className="d-flex justify-content-between aligns-items-center">
             <span className="tittle-content"> Special Donor Group</span>
-            <div onClick={handlShowSpecial}>
+            <div onClick={handleShowSpecial}>
               <BackgroundButton width="6rem" height="2rem" tittle="Create" />
             </div>
           </div>
@@ -288,13 +288,23 @@ const DonorGroup = () => {
           </div>
         </div>
       </div>
-      <ModalAge isOpen={show} />
+      <ModalAge 
+        isOpen={show}
+        handleCancel={handleShow}
+      />
       <ModalConfigure
+        handleCancel={handleShowConfigure}
         isOpen={showConfigure}
         tittleConfigure="Create Campaign Activeness"
       />
-      <ModalLapsed isOpen={showLapsed} />
-      <ModalSpecial isOpen={showSpecial} />
+      <ModalLapsed 
+        isOpen={showLapsed}
+        handleCancel={handleShowLapsed}
+      />
+      <ModalSpecial 
+        isOpen={showSpecial}
+        handleCancel={handleShowSpecial}
+      />
     </>
   );
 };

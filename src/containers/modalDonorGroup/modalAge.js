@@ -2,16 +2,16 @@ import { InputNumber, Modal } from "antd";
 import BackgroundButton from "../../components/buttons/backgroundButton";
 import "../../styles/modalDonor/modalDonor.css";
 const ModalAge = (props) => {
-  const { isOpen, iconClose } = props;
+  const { isOpen, handleCancel } = props;
   return (
     <>
-      <Modal open={isOpen} footer={null} width="37.5rem" closeIcon={iconClose}>
+      <Modal open={isOpen} footer={null} width="37.5rem" onCancel={handleCancel}>
         <div className="row g-0 p-4">
-          <div className="text-center mb-3 h6-size12">
-            <h4>Create Donor Age Group</h4>
+          <div className="text-center mb-3 h2-bold-size20">
+            Create Donor Age Group
           </div>
-          <div className="col-4 d-flex align-items-center small-size11-grey">
-            <label>Donor Age Range</label>
+          <div className="col-4 d-flex align-items-center h4-bold-size15-grey">
+            Donor Age Range
           </div>
           <div className="col-8  d-flex">
             <InputNumber className="me-2" style={{ width: "100%" }} />
