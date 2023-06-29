@@ -1,12 +1,12 @@
 import React from 'react'
 
 const BackgroundButton = (props) => {
-    const { tittle, width, height, onClickBtn, className, fontWeigth, fontSize, bgColor, icon, border, outLine, txtColor, borderRadius} = props;
+    const { tittle, width, height, onClickSubmit, className, fontWeigth, fontSize, bgColor, icon, border, outLine, txtColor, borderRadius} = props;
     return (
       <div>
         <button
           type="button"
-          onClickBtn={onClickBtn}
+          onClick={onClickSubmit}
           className={`btn btn-primary d-flex justify-content-center align-items-center ${className}`}
           style={{
             color: txtColor ? txtColor : "white",

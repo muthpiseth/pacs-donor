@@ -160,12 +160,12 @@ const Sidebar = (props) => {
                 <div className="d-flex align-items-center">
                   <img style={{ height: "1.5rem" }} src={clock} alt="" />
                   <Clock
-                    className="h4-bold-size16 ms-lg-2 ms-md-1"
+                    className="h4-size16 ms-lg-2 ms-md-1"
                     format={'D / MM / YYYY'}
                     ticking={true}
                   />
                   <Clock
-                    className="h4-bold-size16 ms-lg-3 ms-md-1"
+                    className="h4-size16 ms-lg-3 ms-md-1"
                     format={'h:mm'}
                     ticking={true}
                   />

@@ -12,7 +12,6 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<ViewLayout />}>
-          <Route path="/home" element={<List />}/>
           <Route path="/cardDonor" element={<CardDonor/>}/>
         </Route>
         <Route element={<MainLayout />}>
