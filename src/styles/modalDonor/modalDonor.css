@@ -1,7 +1,33 @@
-.ant-input-number .ant-input-number-handler-wrap{
-    display: none;
-
+.ant-input-number .ant-input-number-handler-wrap {
+  display: none;
 }
-.ant-modal{
-    width: 600px !important;
+.ant-input-number {
+  background-color: #f6f6f9c1 !important;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.ant-input-group-addon {
+  border: none !important;
+}
+.ant-textArea {
+  border: 0px;
+  background-color: #f6f6f9c1 !important;
+}
+.ant-textArea:hover {
+  border-color: #d9d9d9 !important;
+}
+.ant-textArea:focus {
+  box-shadow: none;
+}
+.textBorder {
+  border: 2px solid #d9d9d9;
+  border-top: 0px;
+  border-bottom: 0px;
+}
+.btn-add {
+  border: 0.125rem solid #d9d9d9;
+  background-color: #f6f6f9c1 !important;
+  border-top: 0px;
+  border-bottom-left-radius: 0.625rem;
+  border-bottom-right-radius: 0.625rem;
 }
