@@ -1,13 +1,14 @@
 import React from "react";
 import BackgroundButton from "../../components/buttons/backgroundButton";
 import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
+import { RiDeleteBin6Line } from "react-icons/ri";
 
 const Configure = (props) => {
   const { tittle, firstRange, secondRange, desc, day, typeDate, onClick } =
     props;
   return (
     <>
-      <div className="bg-white p-3 mt-3 donor-group">
+      <div className="bg-white p-3  donor-group">
         <div className="d-flex justify-content-between aligns-items-center">
           <span className="tittle-content">{tittle}</span>
           <div onClick={onClick}>
@@ -29,7 +30,7 @@ const Configure = (props) => {
                 <AiOutlineEdit />
               </span>
               <span className="icon-delete">
-                <AiOutlineDelete />
+                <RiDeleteBin6Line />
               </span>
             </div>
           </div>
