@@ -6,7 +6,7 @@ import DonorGroup from '../donorGroup/donorGroup'
 function Group() {
   return (
     <div>
-      <NavbarContent title="Donor Group" />
+      <NavbarContent title={<span className="h2-bold-size24">Donor Group</span>} />
       <Contents content={<DonorGroup/>} />
     </div>
   );
