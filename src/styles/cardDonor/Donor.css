@@ -10,35 +10,35 @@
   font-weight: 500;
 }
 
-.Cardhawkins {
+.Card-Hawkins {
   background: #ffff;
   border-radius: 7px;
   height: 700px;
 }
 
-.HeaderItem {
+.Header-Item {
   background: #ffff;
   border-radius: 7px;
 }
 
-.Cardcharts {
+.Card-Charts {
   background: #ffff;
   border-radius: 7px;
   height: 355px;
 }
 
-.Cardeligible {
+.Card-Eligible {
   background: #ffff;
   border-radius: 7px;
   height: 320px;
 }
 
-.HeaderTitle {
+.Header-Title {
   cursor: pointer;
 
 }
 
-.CardProfile {
+.Card-Profile {
   border-bottom: 2px dashed #ddd;
 
 }
@@ -51,13 +51,13 @@
   border-bottom: 2px dashed #ddd;
 }
 
-.TypeTitle {
+.Type-Title {
   border: 1px solid #ddd;
   border-radius: 5px;
   border-left: 0.3rem solid red;
 }
 
-.TypeTitle1 {
+.Type-Title1 {
   border: 1px solid #ddd;
   border-radius: 5px;
   border-left: 0.3rem solid orange;
@@ -101,4 +101,23 @@
 
 .TextBorderTop {
   border-bottom: 2px dashed #E8EAEF;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.Header-List {
+  background-color: #F6F6F9;
+  height: 44px;
+  color: #152C5B;
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 80%;
+
+}
+
+.border-botton {
+  height: 60px;
 }
