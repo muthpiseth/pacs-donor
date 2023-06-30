@@ -4,7 +4,12 @@ const ModalLapsed = (props) => {
   const { isOpen, handleCancel } = props;
   return (
     <>
-      <Modal open={isOpen} footer={null} width="37.5rem" onCancel={handleCancel}>
+      <Modal
+        open={isOpen}
+        footer={null}
+        width="37.5rem"
+        onCancel={handleCancel}
+      >
         <div className="row g-0 p-4 d-flex justify-content-center align-items-center">
           <div className="text-center mb-3 h2-bold-size20">
             Create Donor Lapsed Group
@@ -13,7 +18,7 @@ const ModalLapsed = (props) => {
             Donor Lapsed Group
           </div>
           <div className="col-8  d-flex align-items-center justify-content-center">
-            <InputNumber className="me-2" />
+            <InputNumber className="me-2 inputFont" />
             <div
               style={{
                 width: "3%",
@@ -26,7 +31,7 @@ const ModalLapsed = (props) => {
           </div>
         </div>
         <div className="d-flex justify-content-center align-items-center mt-4">
-          <BackgroundButton tittle="Submit" />
+          <BackgroundButton tittle="Submit" width="20rem" height="2.8rem" />
         </div>
       </Modal>
     </>

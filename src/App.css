@@ -199,3 +199,12 @@ body {
     color: #152C5B;
     opacity: 40%;
 }
+
+.checkID{
+    border-radius: 7px;
+    background-color: #f6f6f9c1 !important;
+    border: 2px solid #d9d9d929;
+}
+:where(.css-dev-only-do-not-override-1wazalj).ant-select-dropdown{
+    padding: 0px;
+}

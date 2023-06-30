@@ -1,6 +1,8 @@
 import { Input, Modal } from "antd";
 import { AiOutlinePlus, AiOutlineSearch } from "react-icons/ai";
 import BackgroundButton from "../../components/buttons/backgroundButton";
+import SearchType from "../../components/searchType/searchType";
+import { useState } from "react";
 const { TextArea } = Input;
 const ModalSpecial = (props) => {
   const { isOpen, handleCancel } = props;
@@ -16,7 +18,7 @@ const ModalSpecial = (props) => {
               Group Name
             </div>
             <div className="col-9">
-              <Input style={{ width: "100%" }} />
+              <Input style={{ width: "100%" }} className="txtInput"/>
             </div>
           </div>
           <div className="row mt-4 d-flex align-items-center">
@@ -45,33 +47,35 @@ const ModalSpecial = (props) => {
                   borderTopLeftRadius: "0.625rem",
                 }}
               >
-                <Input
-                  prefix={<AiOutlineSearch />}
-                  allowClear={true}
-                  placeholder="input search text"
-                  onSearch={(value) => console.log(value)}
-                  style={{ width: "100%" }}
-                />
+                <SearchType/>
               </div>
               <div className="textBorder">
                 <TextArea
                   style={{ resize: "none" }}
-                  rows="6"
+                  rows="5"
+                  columns="4"
                   placeholder="Input Donor ID to upload"
-                  className="ant-textArea"
+                  className="ant-textArea "
+                  value={id}
+                  onChange={(e) => setID(e.target.value)}
                 />
               </div>
-              <div className=" d-flex justify-content-end p-3 btn-add">
+              <div className=" d-flex justify-content-end p-2 btn-add">
                 <BackgroundButton
                   tittle="Add"
-                  width="5rem"
+                  width="5.8rem"
+                  height="1.8rem"
                   bgColor="white"
                   icon={<AiOutlinePlus />}
                   border="0.125rem solid #d9d9d9"
-                  txtColor="#152c5b16"
+                  txtColor="#152c5b"
+                  borderRadius="10px"
                 />
               </div>
             </div>
+          </div>
+          <div className="mt-4 d-flex justify-content-center align-items-center">
+                  <BackgroundButton tittle="Submit" width="20rem" height="2.8rem"/>
           </div>
         </div>
       </Modal>

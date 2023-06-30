@@ -3,8 +3,8 @@
 }
 .ant-input-number {
   background-color: #f6f6f9c1 !important;
-  font-size: 0.875rem;
-  font-weight: 600;
+  border: 2px solid #d9d9d9;
+  box-shadow: none;
 }
 .ant-input-group-addon {
   border: none !important;
@@ -12,6 +12,9 @@
 .ant-textArea {
   border: 0px;
   background-color: #f6f6f9c1 !important;
+  font-size: 1rem !important;
+  font-weight: 500;
+  color: #152c5b !important;
 }
 .ant-textArea:hover {
   border-color: #d9d9d9 !important;
@@ -30,4 +33,31 @@
   border-top: 0px;
   border-bottom-left-radius: 0.625rem;
   border-bottom-right-radius: 0.625rem;
+}
+.ant-input-number-input{
+    font-size: 1rem !important;
+    font-weight: 500;
+    color: #152c5b !important;
+}
+:where(.css-dev-only-do-not-override-1wazalj).ant-input-number:hover{
+   border-color: #d9d9d9;
+   border-inline-end-width: 2px;
+}
+:where(.css-dev-only-do-not-override-1wazalj).ant-input-number:focus{
+    outline: 0 !important;
+}
+.txtInput{
+    font-size: 1rem !important;
+    font-weight: 500;
+    color: #152c5b !important;
+    background-color: #f6f6f9c1 !important;
+    box-shadow: none;
+}
+:where(.css-dev-only-do-not-override-1wazalj).ant-input:hover{
+    border-color: #d9d9d9;
+   border-inline-end-width: 0.125rem;
+}
+:where(.css-dev-only-do-not-override-1wazalj).ant-input:focus{
+    border-color: #d9d9d9;
+    box-shadow: none
 }
