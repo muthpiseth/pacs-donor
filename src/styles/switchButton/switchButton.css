@@ -9,3 +9,8 @@
 :where(.css-dev-only-do-not-override-1wazalj).ant-switch .ant-switch-handle::after{
   box-shadow:none 
 }
+
+:where(.css-dev-only-do-not-override-1wazalj).ant-switch.ant-switch-unchecked{
+  background-color:  #f6f6f9c1;
+  box-shadow: none
+}

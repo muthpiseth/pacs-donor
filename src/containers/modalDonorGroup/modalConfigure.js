@@ -3,11 +3,9 @@ import BackgroundButton from "../../components/buttons/backgroundButton";
 const ModalConfigure = (props) => {
   const { isOpen, tittleConfigure, handleCancel } = props;
   return (
-    <Modal open={isOpen} width="37.5rem" footer={null} onCancel={handleCancel}>
+    <Modal open={isOpen} width="43.75rem" footer={null} onCancel={handleCancel}>
       <div className="p-4">
-        <div className="text-center mb-4 h2-bold-size20">
-          {tittleConfigure}
-        </div>
+        <div className="text-center mb-4 h2-bold-size20">{tittleConfigure}</div>
         <div className=" d-flex align-items-center justify-content-center">
           <InputNumber className="me-2" />
           <div

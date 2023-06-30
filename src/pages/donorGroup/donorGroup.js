@@ -3,28 +3,38 @@ import BackgroundButton from "../../components/buttons/backgroundButton";
 import "../../styles/donorGroup/donorGroup.css";
 import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
 import { GrStatusGoodSmall } from "react-icons/gr";
+import { RiDeleteBin6Line } from "react-icons/ri";
 import SwitchButton from "../../components/switchButton/switchButton";
 import Configure from "./configure";
 import ModalConfigure from "../../containers/modalDonorGroup/modalConfigure";
 import ModalLapsed from "../../containers/modalDonorGroup/modalLapsed";
 import ModalSpecial from "../../containers/modalDonorGroup/modalSpecial";
 import ModalAge from "../../containers/modalDonorGroup/modalAge";
+import Radios from "../../components/radios/radios";
 const DonorGroup = () => {
   const [show, setShow] = useState(false);
-  const handleShow = () => {show === false ? setShow(true) : setShow(false)};
+  const handleShow = () => {
+    show === false ? setShow(true) : setShow(false);
+  };
   const [showConfigure, setShowConfigure] = useState(false);
-  const handleShowConfigure = () => {showConfigure === false ? setShowConfigure(true) : setShowConfigure(false)};
+  const handleShowConfigure = () => {
+    showConfigure === false ? setShowConfigure(true) : setShowConfigure(false);
+  };
   const [showLapsed, setShowLapsed] = useState(false);
-  const handleShowLapsed = () => {showLapsed === false ? setShowLapsed(true) : setShowLapsed(false)};
+  const handleShowLapsed = () => {
+    showLapsed === false ? setShowLapsed(true) : setShowLapsed(false);
+  };
   const [showSpecial, setShowSpecial] = useState(false);
-  const handleShowSpecial = () => {showSpecial === false ? setShowSpecial(true) : setShowSpecial(false)};
+  const handleShowSpecial = () => {
+    showSpecial === false ? setShowSpecial(true) : setShowSpecial(false);
+  };
   return (
     <>
       <div>
         {/* Age and day */}
-        <div className="row g-3">
-          <div className="col-6">
-            <div className="bg-white p-3 donor-group">
+        <div className="row bg-white gx-5">
+          <div className="col-6 border">
+            <div className=" p-3 donor-group">
               <div className="d-flex justify-content-between aligns-items-center">
                 <span className="tittle-content">Donor Age Group</span>
                 <div onClick={handleShow}>
@@ -48,7 +58,7 @@ const DonorGroup = () => {
                       <AiOutlineEdit />
                     </span>
                     <span className=" me-3 icon-delete">
-                      <AiOutlineDelete />
+                      <RiDeleteBin6Line />
                     </span>
                     <div>
                       <SwitchButton className="switchButton" />
@@ -68,8 +78,8 @@ const DonorGroup = () => {
                     <span className=" me-3 icon-edit">
                       <AiOutlineEdit />
                     </span>
-                    <span className="me-3 icon-delete">
-                      <AiOutlineDelete />
+                    <span className=" me-3 icon-delete">
+                      <RiDeleteBin6Line />
                     </span>
                     <div>
                       <SwitchButton className="switchButton " />
@@ -81,7 +91,7 @@ const DonorGroup = () => {
           </div>
           {/* Lapsed Donor */}
           <div className="col-6">
-            <div className="bg-white p-3 lapsed-group">
+            <div className=" p-3 border lapsed-group">
               <div className="d-flex justify-content-between aligns-items-center">
                 <span className="tittle-content">Lapsed Donor Group</span>
                 <div onClick={handleShowLapsed}>
@@ -106,7 +116,73 @@ const DonorGroup = () => {
                       <AiOutlineEdit />
                     </span>
                     <span className=" me-3 icon-delete">
-                      <AiOutlineDelete />
+                      <RiDeleteBin6Line />
+                    </span>
+                    <div>
+                      <SwitchButton className="switchButton" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="row gx-0 d-flex justify-content-between align-items-center p-2 px-3 mt-3 donor-border ">
+                <div className="col-6 d-flex">
+                  <div className="text-h6">Lapsed Time :</div>
+                  <div className="ms-3 text-h5">7</div>
+                  <div className="ms-1 text-h5"> - </div>
+                  <div className="ms-1 text-h5">14</div>
+                  <div className="ms-1 text-h5">days</div>
+                </div>
+                <div className="col-6">
+                  <div className="d-flex justify-content-end align-items-center">
+                    <span className=" me-3 icon-edit">
+                      <AiOutlineEdit />
+                    </span>
+                    <span className=" me-3 icon-delete">
+                      <RiDeleteBin6Line />
+                    </span>
+                    <div>
+                      <SwitchButton className="switchButton" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="row gx-0 d-flex justify-content-between align-items-center p-2 px-3 mt-3 donor-border ">
+                <div className="col-6 d-flex">
+                  <div className="text-h6">Lapsed Time :</div>
+                  <div className="ms-3 text-h5">7</div>
+                  <div className="ms-1 text-h5"> - </div>
+                  <div className="ms-1 text-h5">14</div>
+                  <div className="ms-1 text-h5">days</div>
+                </div>
+                <div className="col-6">
+                  <div className="d-flex justify-content-end align-items-center">
+                    <span className=" me-3 icon-edit">
+                      <AiOutlineEdit />
+                    </span>
+                    <span className=" me-3 icon-delete">
+                      <RiDeleteBin6Line />
+                    </span>
+                    <div>
+                      <SwitchButton className="switchButton" />
+                    </div>
+                  </div>
+                </div>
+              </div>{" "}
+              <div className="row gx-0 d-flex justify-content-between align-items-center p-2 px-3 mt-3 donor-border ">
+                <div className="col-6 d-flex">
+                  <div className="text-h6">Lapsed Time :</div>
+                  <div className="ms-3 text-h5">7</div>
+                  <div className="ms-1 text-h5"> - </div>
+                  <div className="ms-1 text-h5">14</div>
+                  <div className="ms-1 text-h5">days</div>
+                </div>
+                <div className="col-6">
+                  <div className="d-flex justify-content-end align-items-center">
+                    <span className=" me-3 icon-edit">
+                      <AiOutlineEdit />
+                    </span>
+                    <span className=" me-3 icon-delete">
+                      <RiDeleteBin6Line />
                     </span>
                     <div>
                       <SwitchButton className="switchButton" />
@@ -146,11 +222,11 @@ const DonorGroup = () => {
                 </span>
               </div>
             </div>
-            <div className="col-2 ">
+            <div className="col-2">
               <span className="text-special">Group Members:</span>
             </div>
             <div className="col-10 text-box">
-              <div className="number-contain me-3">
+              <div className="number-contain ">
                 <p>D2244848</p>
                 <p>D2244848</p>
                 <p>D2244848</p>
@@ -182,9 +258,9 @@ const DonorGroup = () => {
               <div>
                 <div className="row gx-0 d-flex align-items-center justify-content-between p-2 px-3 mt-3 donor-border">
                   <div className="col-5">
-                    <div>
+                    <div className="d-flex">
                       <span className="text-h6 me-2 text-danger">
-                        <GrStatusGoodSmall />
+                        <Radios />
                       </span>
                       <span className="text-h5">High Activeness</span>
                     </div>
@@ -205,9 +281,9 @@ const DonorGroup = () => {
                 </div>
                 <div className="row gx-0 d-flex align-items-center justify-content-between p-2 px-3 mt-3 donor-border">
                   <div className="col-5 ">
-                    <div>
-                      <span className="text-h6 me-2 text-success">
-                        <GrStatusGoodSmall />
+                    <div className="d-flex">
+                      <span className="text-h6 me-2 text-danger">
+                        <Radios />
                       </span>
                       <span className="text-h5">High Activeness</span>
                     </div>
@@ -228,9 +304,9 @@ const DonorGroup = () => {
                 </div>
                 <div className="row gx-0 d-flex align-items-center justify-content-between p-2 px-3 mt-3 donor-border">
                   <div className="col-5 ">
-                    <div>
-                      <span className="text-h6 me-2">
-                        <GrStatusGoodSmall />
+                    <div className="d-flex">
+                      <span className="text-h6 me-2 text-danger">
+                        <Radios />
                       </span>
                       <span className="text-h5">High Activeness</span>
                     </div>
@@ -288,23 +364,14 @@ const DonorGroup = () => {
           </div>
         </div>
       </div>
-      <ModalAge 
-        isOpen={show}
-        handleCancel={handleShow}
-      />
+      <ModalAge isOpen={show} handleCancel={handleShow} />
       <ModalConfigure
         handleCancel={handleShowConfigure}
         isOpen={showConfigure}
         tittleConfigure="Create Campaign Activeness"
       />
-      <ModalLapsed 
-        isOpen={showLapsed}
-        handleCancel={handleShowLapsed}
-      />
-      <ModalSpecial 
-        isOpen={showSpecial}
-        handleCancel={handleShowSpecial}
-      />
+      <ModalLapsed isOpen={showLapsed} handleCancel={handleShowLapsed} />
+      <ModalSpecial isOpen={showSpecial} handleCancel={handleShowSpecial} />
     </>
   );
 };
