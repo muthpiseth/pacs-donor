@@ -7,7 +7,7 @@ function List() {
   return (
     <div>
       <NavbarContent title={<span className="h2-bold-size24">Donor List</span>} item="Button" />
-      <Contents className="bg-white" content={<CardDonorList/>} />
+      <Contents className="bg-white p-4" content={<CardDonorList/>} />
     </div>
   );
 }

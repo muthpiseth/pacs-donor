@@ -1,6 +1,6 @@
 import React from "react";
 import BackgroundButton from "../../components/buttons/backgroundButton";
-import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
+import { AiOutlineEdit } from "react-icons/ai";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
 const Configure = (props) => {

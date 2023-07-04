@@ -7,10 +7,11 @@ const ModalLapsed = (props) => {
       <Modal
         open={isOpen}
         footer={null}
+        centered
         width="37.5rem"
         onCancel={handleCancel}
       >
-        <div className="row g-0 p-4 d-flex justify-content-center align-items-center">
+        <div className="row g-0 px-4 pb-4 d-flex justify-content-center align-items-center">
           <div className="text-center mb-3 h2-bold-size20">
             Create Donor Lapsed Group
           </div>
@@ -30,7 +31,7 @@ const ModalLapsed = (props) => {
             <div className="ms-2 h4-bold-size15-grey">days</div>
           </div>
         </div>
-        <div className="d-flex justify-content-center align-items-center mt-4">
+        <div className="d-flex justify-content-center align-items-center mb-2">
           <BackgroundButton tittle="Submit" width="20rem" height="2.8rem" />
         </div>
       </Modal>

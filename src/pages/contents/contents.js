@@ -4,7 +4,7 @@ function Contents(props) {
     const {content, className} = props;
   return (
     <div
-      className={`p-4 ${className}`}
+      className={className}
       style={{
         minHeight: "28.8rem",
         borderRadius: "0.5rem",

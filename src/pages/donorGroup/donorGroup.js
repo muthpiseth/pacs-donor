@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import BackgroundButton from "../../components/buttons/backgroundButton";
 import "../../styles/donorGroup/donorGroup.css";
-import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
+import { AiOutlineEdit } from "react-icons/ai";
 import SwitchButton from "../../components/switchButton/switchButton";
 import Configure from "./configure";
 import ModalConfigure from "../../containers/modalDonorGroup/modalConfigure";
@@ -208,7 +208,7 @@ const DonorGroup = () => {
                   <AiOutlineEdit />
                 </span>
                 <span className="icon-delete">
-                  <AiOutlineDelete />
+                  <RiDeleteBin6Line />
                 </span>
               </div>
             </div>
@@ -217,7 +217,6 @@ const DonorGroup = () => {
             </div>
             <div className="col-10 text-box">
               <div className="number-contain me-3">
-                <p>D2244848</p>
                 <p>D2244848</p>
                 <p>D2244848</p>
                 <p>D2244848</p>
@@ -247,7 +246,7 @@ const DonorGroup = () => {
               </div>
               <div>
                 <div className="row gx-0 d-flex align-items-center justify-content-between p-2 px-3 mt-3 donor-border">
-                  <div className="col-5">
+                  <div className="col-6">
                     <div className="d-flex">
                       <span className="text-h6 me-2 text-danger">
                         <Radios/>
@@ -270,7 +269,7 @@ const DonorGroup = () => {
                   </div>
                 </div>
                 <div className="row gx-0 d-flex align-items-center justify-content-between p-2 px-3 mt-3 donor-border">
-                  <div className="col-5 ">
+                  <div className="col-6 ">
                   <div className="d-flex">
                       <span className="text-h6 me-2 text-danger">
                         <Radios/>
@@ -293,7 +292,7 @@ const DonorGroup = () => {
                   </div>
                 </div>
                 <div className="row gx-0 d-flex align-items-center justify-content-between p-2 px-3 mt-3 donor-border">
-                  <div className="col-5 ">
+                  <div className="col-6 ">
                   <div className="d-flex">
                       <span className="text-h6 me-2 text-danger">
                         <Radios/>
@@ -339,6 +338,7 @@ const DonorGroup = () => {
               firstRange="1"
               secondRange="10"
               desc="Success and completed referral"
+              onClick={handleShowConfigure}
             />
           </div>
           {/* configure App Activeness */}
@@ -350,6 +350,7 @@ const DonorGroup = () => {
               desc="Campaign attended within"
               day="365"
               typeDate="days"
+              onClick={handleShowConfigure}
             />
           </div>
         </div>
