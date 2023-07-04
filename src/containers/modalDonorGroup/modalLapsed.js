@@ -15,10 +15,10 @@ const ModalLapsed = (props) => {
           <div className="text-center mb-3 h2-bold-size20">
             Create Donor Lapsed Group
           </div>
-          <div className="col-4 d-flex align-items-center justify-content-center h4-bold-size15-grey">
+          <div className="col-4 d-flex align-items-center justify-content-center h4-bold-size14-grey">
             Donor Lapsed Group
           </div>
-          <div className="col-8  d-flex align-items-center justify-content-center">
+          <div className="col-8 d-flex align-items-center justify-content-center">
             <InputNumber className="me-2 inputFont" />
             <div
               style={{
@@ -33,7 +33,7 @@ const ModalLapsed = (props) => {
         </div>
         <div className="d-flex justify-content-center align-items-center mb-2">
           <BackgroundButton tittle="Submit" width="20rem" height="2.8rem" />
-        </div>
+        </div>   
       </Modal>
     </>
   );

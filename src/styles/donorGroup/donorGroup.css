@@ -13,7 +13,8 @@
 .number-contain {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 50px;
+  column-gap:2.938rem;
+  row-gap:0.75rem;
 }
 .tittle-content {
   font-size: 1.25rem;

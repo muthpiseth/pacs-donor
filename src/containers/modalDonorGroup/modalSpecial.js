@@ -1,11 +1,12 @@
 import { Input, Modal } from "antd";
-import { AiOutlinePlus } from "react-icons/ai";
+import { AiOutlineClose, AiOutlinePlus } from "react-icons/ai";
 import BackgroundButton from "../../components/buttons/backgroundButton";
 import SearchType from "../../components/searchType/searchType";
+import "../../styles/modalDonor/modalDonor.css";
 const { TextArea } = Input;
 const ModalSpecial = (props) => {
   const { isOpen, handleCancel } = props;
-  
+
   return (
     <>
       <Modal
@@ -15,7 +16,7 @@ const ModalSpecial = (props) => {
         footer={null}
         onCancel={handleCancel}
       >
-        <div className="px-5">
+        <div className="px-4">
           <div className="text-center mb-4 h2-bold-size20">
             Create Special Donor Group
           </div>
@@ -27,7 +28,7 @@ const ModalSpecial = (props) => {
           </div>
           <div className="row mt-4 d-flex align-items-center">
             <div className="col-3">
-              <span className="h4-bold-size16">Select Donors</span>
+              <span className="h4-bold-size17-weight700">Select Donors</span>
             </div>
             <div className="col-9">
               <div
@@ -39,6 +40,34 @@ const ModalSpecial = (props) => {
               ></div>
             </div>
           </div>
+          {/* id-donor */}
+          <div className="id-donor mt-2">
+            <div className="p-1  sub-idDonor">
+              <small>D2244848</small>
+              <div className="ms-3 mb-2 icon-close">
+                <AiOutlineClose />
+              </div>
+            </div>
+            <div className="p-1 px-3 sub-idDonor">
+              <small>D2244848</small>
+              <div className="ms-3 mb-2 icon-close">
+                <AiOutlineClose />
+              </div>
+            </div>
+            <div className="p-1 px-3 sub-idDonor">
+              <small>D2244848</small>
+              <div className="ms-3 mb-2 icon-close">
+                <AiOutlineClose />
+              </div>
+            </div>
+            <div className="p-1 px-3 sub-idDonor">
+              <small>D2244848</small>
+              <div className="ms-3 mb-2 icon-close">
+                <AiOutlineClose />
+              </div>
+            </div>
+          </div>
+          {/* input or choose id-donor */}
           <div className="row mt-4">
             <div className="col-12">
               <div
@@ -54,8 +83,8 @@ const ModalSpecial = (props) => {
               <div className="textBorder">
                 <TextArea
                   style={{ resize: "none" }}
-                  rows="5"
-                  columns="4"
+                  rows="3"
+                  columns="3"
                   placeholder="Input Donor ID to upload"
                   className="ant-textArea"
                 />
@@ -69,12 +98,12 @@ const ModalSpecial = (props) => {
                   icon={<AiOutlinePlus />}
                   border="0.125rem solid #d9d9d9"
                   txtColor="#152c5b"
-                  borderRadius="10px"
+                  borderRadius="0.625rem"
                 />
               </div>
             </div>
           </div>
-          <div className="mt-4 mb-2 d-flex justify-content-center align-items-center">
+          <div className="d-flex justify-content-center align-items-center mt-5">
             <BackgroundButton tittle="Submit" width="20rem" height="2.8rem" />
           </div>
         </div>

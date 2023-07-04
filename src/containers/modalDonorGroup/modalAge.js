@@ -16,10 +16,10 @@ const ModalAge = (props) => {
           <div className="text-center mb-3 h2-bold-size20">
             Create Donor Age Group
           </div>
-          <div className="col-4 d-flex align-items-center h4-bold-size15-grey">
+          <div className="col-4 d-flex align-items-center h4-bold-size14-grey">
             Donor Age Range
           </div>
-          <div className="col-8  d-flex">
+          <div className="col-8 d-flex">
             <InputNumber className="me-2" style={{ width: "100%" }} />
             <div
               style={{
@@ -34,7 +34,7 @@ const ModalAge = (props) => {
         </div>
         <div className="d-flex justify-content-center align-items-center mb-2">
           <BackgroundButton tittle="Submit" width="20rem" height="2.8rem" />
-        </div>
+        </div> 
       </Modal>
     </>
   );
