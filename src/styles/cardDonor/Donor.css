@@ -1,6 +1,6 @@
 .Logo {
-  height: 50px;
-  width: 50px;
+  height: 3.125rem;
+  width: 3.125rem;
   border-radius: 100%;
   background: blue;
   display: flex;
@@ -12,25 +12,22 @@
 
 .Card-Hawkins {
   background: #ffff;
-  border-radius: 7px;
-  height: 700px;
+  border-radius: 0.438rem;
 }
 
 .Header-Item {
   background: #ffff;
-  border-radius: 7px;
+  border-radius: 0.438rem;
 }
 
 .Card-Charts {
   background: #ffff;
-  border-radius: 7px;
-  height: 355px;
+  border-radius: 0.438rem;
 }
 
 .Card-Eligible {
   background: #ffff;
-  border-radius: 7px;
-  height: 320px;
+  border-radius: 0.438rem;
 }
 
 .Header-Title {
@@ -38,55 +35,45 @@
 
 }
 
-.Card-Profile {
-  border-bottom: 2px dashed #ddd;
-
-}
-
-.TitleNumber {
-  border-bottom: 2px dashed #ddd;
-}
-
 .TextIcon {
-  border-bottom: 2px dashed #ddd;
+  border-bottom: 0.125rem dashed #E8EAEF;
+  border-top: 0.125rem dashed #E8EAEF;
 }
 
 .Type-Title {
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  border: 1px solid #E8EAEF;
+  border-radius: 0.313rem;
   border-left: 0.3rem solid red;
 }
 
 .Type-Title1 {
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  border: 1px solid #E8EAEF;
+  border-radius: 0.313rem;
   border-left: 0.3rem solid orange;
 }
 
 .ovrlay {
   position: relative;
   cursor: pointer;
-
 }
 
 .item-ovrlay {
   position: absolute;
   width: 100%;
-  height: 38px;
+  height: 2.375rem;
   background: #D9EAFF;
   opacity: 0.9;
   bottom: 0;
   display: flex;
   justify-content: center;
   justify-content: space-between;
-  line-height: 38px;
+  line-height: 2.375rem;
   padding: 0rem 1rem;
-  border-radius: 0px, 0px, 6px, 6px;
-
+  border-radius: 0rem, 0rem, 0.375rem, 0.375rem;
 }
 
 .item-ovrlay p {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   color: #fff;
 }
@@ -96,11 +83,10 @@
   height: 9rem;
   object-fit: cover;
   border-radius: 0.2rem;
-
 }
 
 .TextBorderTop {
-  border-bottom: 2px dashed #E8EAEF;
+  border-bottom: 0.125rem dashed #E8EAEF;
 }
 
 table {
@@ -110,14 +96,22 @@ table {
 
 .Header-List {
   background-color: #F6F6F9;
-  height: 44px;
-  color: #152C5B;
-  font-size: 15px;
-  font-weight: 500;
-  opacity: 80%;
-
+  height: 2.75rem;
 }
 
 .border-botton {
-  height: 60px;
+  height: 3.75rem;
+  border-bottom: 0.063rem solid #E8EAEF !important
+}
+
+.float-end11 {
+  background: 0 !important;
+}
+
+.float-end11:hover {
+  background: 0;
+}
+
+.float-end11:focus {
+  background: 0 !important;
 }
