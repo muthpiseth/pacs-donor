@@ -130,7 +130,7 @@ const Sidebar = (props) => {
         <Header
           style={{
             padding: 0,
-            background: colorBgContainer,
+            background: colorBgContainer
           }}
         >
           <div 

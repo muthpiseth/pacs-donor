@@ -1,26 +1,21 @@
 import { Input, Modal } from "antd";
-import { AiOutlinePlus, AiOutlineSearch } from "react-icons/ai";
+import { AiOutlinePlus } from "react-icons/ai";
 import BackgroundButton from "../../components/buttons/backgroundButton";
 import SearchType from "../../components/searchType/searchType";
-import { useState } from "react";
 const { TextArea } = Input;
 const ModalSpecial = (props) => {
   const { isOpen, handleCancel } = props;
-  const [id ,setId] = useState("")
-
-  const handleSubmit = (event) =>{
-    event.preventDefault();
-    setId(event.target.value)
-  }
+  
   return (
     <>
       <Modal
         open={isOpen}
+        centered
         width="43.75rem"
         footer={null}
         onCancel={handleCancel}
       >
-        <div className="p-5">
+        <div className="px-5">
           <div className="text-center mb-4 h2-bold-size20">
             Create Special Donor Group
           </div>
@@ -63,7 +58,6 @@ const ModalSpecial = (props) => {
                   columns="4"
                   placeholder="Input Donor ID to upload"
                   className="ant-textArea"
-                  value={id}
                 />
               </div>
               <div className=" d-flex justify-content-end p-2 btn-add">
@@ -80,7 +74,7 @@ const ModalSpecial = (props) => {
               </div>
             </div>
           </div>
-          <div className="mt-4 d-flex justify-content-center align-items-center">
+          <div className="mt-4 mb-2 d-flex justify-content-center align-items-center">
             <BackgroundButton tittle="Submit" width="20rem" height="2.8rem" />
           </div>
         </div>
