@@ -4,7 +4,7 @@ function Contents(props) {
   const contents = props.contents;
   return (
     <>
-    <div className="d-flex justify-content-between"
+    <div className="d-flex justify-content-between "
       style={{
         marginBottom: "1.5rem"
       }}

@@ -84,6 +84,3 @@
   justify-content: center;
 }
 /* special modal */
-:where(.css-dev-only-do-not-override-1wazalj).ant-select-single.ant-select-show-arrow .ant-select-selection-item{
-  display: none;
-}

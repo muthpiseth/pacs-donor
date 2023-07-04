@@ -50,7 +50,8 @@ import {
   AppointmentHearder,
 } from "../../assets/images";
 import BackgroundButton from "../../components/buttons/backgroundButton";
-import { Progress } from "antd";
+
+import Clock from "react-live-clock";
 const CardDonor = () => {
   const [data, setData] = useState({
     item: [
@@ -220,10 +221,6 @@ const CardDonor = () => {
       },
     ],
   });
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Hell");
-  };
   let countCol = 0;
   return (
     <div className="container mt-5 pt-5 pb-5">
@@ -235,29 +232,29 @@ const CardDonor = () => {
         }}
       >
         <h4>
-          <img src={IconBack} /> View Donor Chart
+          <img src={IconBack} alt="" /> View Donor Chart
         </h4>
       </a>
       <div className="row mt-4">
-        <div className="col-12 col-md-12 col-lg-5">
+        <div className="col-12 col-md-12 col-lg-5  d-inline-flex ">
           <div className="Card-Hawkins p-3">
             <div className="clearfix">
               <h5 className="float-start h2-bold-size24">Guy Hawkins</h5>
               <BackgroundButton
-                tittle="Check-out"
-                className="float-end ms-3"
-                width="120px"
+                tittle="Check out"
+                className="float-end11 border border-warning text-warning float-end ms-2"
+                width="7.5rem"
               />
               <BackgroundButton
                 tittle="Check-in"
                 className="float-end "
-                width="110px"
+                width="6.875rem"
               />
             </div>
-            <div className="Card-Profile d-flex  mt-2  ">
+            <div className="Card-Profile d-flex  mt-2">
               <div className="card border-0 me-3">
                 <div className="ovrlay">
-                  <img src={Itmeimg} alt="..." />
+                  <img src={Itmeimg} alt="" />
                   <div className="item-ovrlay">
                     <div>
                       <p className="text-primary">
@@ -273,7 +270,7 @@ const CardDonor = () => {
                 </div>
               </div>
 
-              <div className="TitleName float-start  me-3 h2-bold-size20-grey">
+              <div className="TitleName float-start  me-3 h6-size12-grey">
                 <h6 className="fs-6">Donor ID</h6>
                 <h6 className="fs-6">Donor State</h6>
                 <h6 className="fs-6">Donor Type</h6>
@@ -281,7 +278,7 @@ const CardDonor = () => {
                 <h6 className="fs-6">Register Date</h6>
                 <h6 className="fs-6">Location</h6>
               </div>
-              <div className="h5-bold-size13 ">
+              <div className="h4-bold-size14">
                 <h6 className="fs-6">D129999</h6>
                 <h6 className="fs-6">
                   <GrStatusGoodSmall size={8} color="#21C273" /> Active
@@ -292,17 +289,17 @@ const CardDonor = () => {
                 <h6 className="fs-6">Location text</h6>
               </div>
             </div>
-            <div className="d-flex align-items-center justify-content-center p-2">
+            <div className="d-flex align-items-center justify-content-center p-2 TextIcon">
               <div className="col-lg-4">
                 <div className="Title-Text">
                   <h4 className="ms-5 h2-bold-size24">21</h4>
-                  <p className="h5-bold-size13-grey">Collection Count</p>
+                  <p className="h4-size16-grey">Collection Count</p>
                 </div>
               </div>
               <div className="col-lg-4">
                 <div className="Title-Text text-center mt-3">
                   <h4 className="h2-bold-size24">5</h4>
-                  <p className="h5-bold-size13-grey">
+                  <p className="h4-size16-grey">
                     Days Since <br /> Last Donation
                   </p>
                 </div>
@@ -310,7 +307,7 @@ const CardDonor = () => {
               <div className="col-lg-4">
                 <div className="Title-Text text-center mt-3 ">
                   <h4 className="h2-bold-size24">1</h4>
-                  <p className="h5-bold-size13-grey">
+                  <p className="h4-size16-grey">
                     Appointments <br /> in 7 days
                   </p>
                 </div>
@@ -318,14 +315,14 @@ const CardDonor = () => {
             </div>
             <div
               className="d-flex p-2"
-              style={{ borderBottom: "2px  dashed #ddd" }}
+              style={{ borderBottom: "0.125rem  dashed #ddd" }}
             >
               <div className="col-lg-3">
                 <div className="">
                   <p className="text-center">
                     <AiFillCheckCircle color="#21C273" size={25} />
                   </p>
-                  <p className="h5-bold-size13-grey ">
+                  <p className="h5-bold-size13-grey">
                     Last Collection 01/11/2022 200ml
                     <br /> Last payout: $70
                   </p>
@@ -336,7 +333,7 @@ const CardDonor = () => {
                   <p>
                     <AiFillCheckCircle color="#21C273" size={25} />
                   </p>
-                  <p className="h5-bold-size13-grey ">
+                  <p className="h5-bold-size13-grey">
                     Last Annual <br />
                     Medical Check 02/15/2022
                   </p>
@@ -365,7 +362,7 @@ const CardDonor = () => {
                   <>
                     <div
                       className={`${countCol++} div-${countCol} ${
-                        countCol === 2 ? "col-lg-6" : "col-lg-3"
+                        countCol === 2 ? "col-lg-6 px-4" : "col-lg-3"
                       } ${countCol === 3 ? (countCol = 0) : ``}  mb-4`}
                       key={index}
                     >
@@ -383,9 +380,9 @@ const CardDonor = () => {
           </div>
         </div>
         <div className="col-12 col-md-12 col-lg-7">
-          <div className="Card-Eligible p-3">
+          <div className="Card-Eligible p-3 ">
             <div className="row  text-start justify-content-center align-items-center">
-              <div className="col-lg-3 ClassNameP h6-size12-grey">
+              <div className="col-lg-3  h6-size12-grey">
                 <h6>
                   Next Eligible
                   <br />
@@ -393,7 +390,9 @@ const CardDonor = () => {
                 </h6>
               </div>
               <div className="col-lg-3  d-flex align-items-center">
-                <span className="me-3 h4-bold-size16 ">01 / 16 / 2022</span>
+                <span className="me-3 h4-bold-size16 ">
+                  <Clock format={"DD / MM / YYYY"} ticking={true} />
+                </span>
                 <span>
                   <img src={Bell} alt="" />
                 </span>
@@ -406,48 +405,46 @@ const CardDonor = () => {
                 </h6>
               </div>
               <div className="col-lg-3">
-                <span className="me-3 h4-bold-size16 ">01 / 16 / 2022</span>{" "}
+                <span className="me-3 h4-bold-size16 ">
+                  <Clock format={"DD / MM / YYYY"} ticking={true} />
+                </span>
                 <br />
-                <span className="h5-bold-size13">08:00am-08:30am</span>
+                <span className="h5-bold-size13">
+                  <Clock format={"h:mm:ssa"} ticking={true} />
+                </span>
               </div>
             </div>
             <div className="row justify-content-center align-items-center  mt-2">
               <div className="col-lg-6 d-flex">
-                <h5 className="me-2 h3-bold-size18 ">NOTES</h5>
+                <h5 className="me-2 h3-bold-size18">NOTES</h5>
                 <span
                   className="me-2 text-center"
                   style={{
-                    width: "25px",
-                    height: "20px",
-                    borderRadius: "8px",
+                    width: "1.563rem",
+                    height: "1.25rem",
+                    borderRadius: "0.5rem",
                     background: "blue",
                     color: "#fff",
-                    lineHeight: "20px",
+                    lineHeight: "1.25rem",
                   }}
                 >
                   2
                 </span>
-                <a style={{ fontSize: "15px" }} href="">
-                  More <img src={Moreicon} />
+                <a style={{ fontSize: "0.938rem" }} href="#!">
+                  More <img src={Moreicon} alt="" />
                 </a>
               </div>
               <div className="col-lg-6  d-flex  justify-content-end">
-                <h6
-                  style={{
-                    border: "1px solid #ddd",
-                    borderRadius: "5px",
-                    fontWeight: "600",
-                    color: "#152C5B",
-                    opacity: "90%",
-                  }}
-                  className="p-2"
-                  onClick={handleSubmit}
-                >
-                  <AiOutlinePlus /> Add new Notes
-                </h6>
+                <BackgroundButton
+                  icon={<AiOutlinePlus />}
+                  tittle="Add New Notes"
+                  txtColor="#152C5B"
+                  className="float-end11 border"
+                  width="11.875rem"
+                />
               </div>
             </div>
-            <div className="Type-Title p-2">
+            <div className="Type-Title p-2 mt-3">
               <tr>
                 <td className="h3-bold-size17-grey">Note Type :</td>
                 <td className="h4-bold-size16">lnjured</td>
@@ -473,8 +470,8 @@ const CardDonor = () => {
               </tr>
             </div>
           </div>
-          <div className="Card-Charts mt-4 p-3 ">
-            <h5 className="h2-bold-size20-grey">CHARTS</h5>
+          <div className="Card-Charts mt-4 p-3">
+            <h5 className="h3-bold-size18">CHARTS</h5>
             <div className="row mt-3 h4-bold-size16-grey ">
               {data.itemChart.map((item, index) => (
                 <>
@@ -493,11 +490,11 @@ const CardDonor = () => {
           </div>
         </div>
       </div>
-      <div className="Header-Item p-3 mt-3 justify-content-between  d-flex text-center">
-        {data.item.map((it, index) => (
-          <div className="Header-Title h4-bold-size14-grey " key={index}>
-            <div className="mt-2">{it.urlimg}</div>
-            <p className="mt-2">{it.texttitle}</p>
+      <div className="Header-Item p-3 mt-4 justify-content-between  d-flex text-center">
+        {data.item.map((MainHeader, index) => (
+          <div className="Header-Title h5-bold-size13 " key={index}>
+            <div className="mt-2">{MainHeader.urlimg}</div>
+            <p className="mt-2">{MainHeader.texttitle}</p>
           </div>
         ))}
       </div>
