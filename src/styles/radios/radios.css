@@ -1,11 +1,11 @@
 :where(.css-dev-only-do-not-override-1wazalj).ant-radio-wrapper .ant-radio-inner::after{
-background-color: #066601;
+background-color: #0a8203;
 }
 :where(.css-dev-only-do-not-override-1wazalj).ant-radio-wrapper .ant-radio-checked .ant-radio-inner{
-    background-color:#04870b3d;
+    background-color:#08b4113d;
    border: none;
     box-shadow: none;
 }
 :where(.css-dev-only-do-not-override-1wazalj).ant-radio-wrapper:hover .ant-radio-inner{
-    border-color: #d9d9d9 ;
+    border-color: #d9d9d9;
 }

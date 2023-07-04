@@ -3,7 +3,7 @@
 }
 .ant-input-number {
   background-color: #f6f6f9c1 !important;
-  border: 2px solid #d9d9d9;
+  border: 0.125rem solid #d9d9d9;
   box-shadow: none;
 }
 .ant-input-group-addon {
@@ -23,7 +23,7 @@
   box-shadow: none;
 }
 .textBorder {
-  border: 2px solid #d9d9d9;
+  border: 0.125rem solid #d9d9d9;
   border-top: 0px;
   border-bottom: 0px;
 }
@@ -41,7 +41,7 @@
 }
 :where(.css-dev-only-do-not-override-1wazalj).ant-input-number:hover{
    border-color: #d9d9d9;
-   border-inline-end-width: 2px;
+   border-inline-end-width: 0.125rem;
 }
 :where(.css-dev-only-do-not-override-1wazalj).ant-input-number:focus{
     outline: 0 !important;
@@ -60,4 +60,30 @@
 :where(.css-dev-only-do-not-override-1wazalj).ant-input:focus{
     border-color: #d9d9d9;
     box-shadow: none
+}
+/* id */
+.id-donor{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.813rem;
+  font-size: 1rem !important;
+  font-weight: 600;
+  color: #152c5b !important;
+}
+.icon-close{
+  font-size: 0.75rem !important;
+  color: gray;
+}
+.sub-idDonor{
+  width: 23%;
+  border-radius: 0.625rem;
+  border: 0.125rem solid #04ae0c9d;
+  background-color:#099e0e05;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* special modal */
+:where(.css-dev-only-do-not-override-1wazalj).ant-select-single.ant-select-show-arrow .ant-select-selection-item{
+  display: none;
 }
