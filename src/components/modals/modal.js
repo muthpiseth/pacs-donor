@@ -29,7 +29,7 @@ export default function Modal(props) {
                   <Button type="primary" style={{
                     width: "50%"
                   }}>
-                    {props.submit}
+                    Submit
                   </Button>
                 </div>
               </div>
@@ -43,7 +43,7 @@ export default function Modal(props) {
           data-bs-whatever="@mdo"
         >
           <span className="d-flex">
-            <Button type="primary">{props.create}</Button>
+            <Button type="primary">Create</Button>
           </span>
         </div>
       </div>

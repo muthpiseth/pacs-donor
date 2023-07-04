@@ -1,0 +1,47 @@
+.chart{
+    border-bottom: 2px dashed gray;
+  }
+  .per{
+    background-color: rgb(208, 255, 208);
+    color: rgb(0, 165, 8);
+  border-radius: 3px;
+  }
+  .pers{
+    background-color: rgb(244, 183, 183);
+    color: rgb(255, 9, 9);
+  border-radius: 3px;
+  }
+  .higher{
+    color: rgb(0, 191, 25);
+    cursor: pointer;
+  }
+  .high{
+    color: rgb(255, 159, 3);
+    cursor: pointer;
+  }
+  .medium{
+    color: rgb(250, 208, 0);
+    cursor: pointer;
+  }
+  .low{
+    color: rgb(122, 122, 121);
+    cursor: pointer;
+  }
+  .ant-progress-bg{
+    border-radius: 0 !important;
+    border-top-right-radius: 5px!important;
+    border-bottom-right-radius: 5px!important;
+  }
+  .ant-progress-inner{
+    background: 0 !important;
+  }
+  .prog{
+    opacity: 50%!important;
+  }
+  .bt{
+    border: 1px solid rgb(193, 193, 193);
+    border-radius: 7px;
+  }
+  .back{
+    border-radius: 10px;
+  }
