@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../styles/navbars/navbar.css';
 import NavbarProfile from './navbarProfile';
 import men from '../../assets/images/men.jpg';
 import logoama from '../../assets/logos/logoama.svg';
@@ -11,6 +12,9 @@ function Navbar() {
       </div>
       <div>
         <NavbarProfile
+          className="profile-text"
+          nameID="name"
+          positionID="position"
           name="Muth Piseth"
           position="Reception"
           picture={men}

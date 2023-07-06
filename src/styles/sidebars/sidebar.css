@@ -11,7 +11,7 @@
 }
 .pofile-name #name {
     position: absolute;
-    top: -0.4rem;
+    top: -0.5rem;
 }
 .pofile-name #position {
     position: absolute;
@@ -28,7 +28,7 @@
     .search-button {
         font-size: 0.9rem;
     }
-    .h4-size16 {
+    .h4-bold-size16 {
         font-size: 0.9rem;
     }
 }
@@ -91,7 +91,7 @@
     left: 1.8%;
 }
 #menu .ant-menu-submenu-open li.ant-menu-item-selected {
-    border-right: 3px solid #0075FF;
+    border-right: 4px solid #0075FF;
     left: 1.8%;
 }
 #menu .ant-menu-submenu-title {
@@ -100,4 +100,23 @@
 }
 #menu .ant-menu-submenu-title:hover{
     background: 0 !important;
+}
+
+/* action submenu when sider small */
+.ant-menu-submenu-popup .ant-menu-vertical .ant-menu-item-selected {
+    background: 0 !important;
+    opacity: 100% !important;
+}
+.ant-menu-submenu-popup .ant-menu-vertical .ant-menu-item-selected .ant-menu-item-icon {
+    color: #0075FF !important;
+}
+.ant-menu-submenu-popup .ant-menu-vertical .ant-menu-item:hover {
+    background: 0 !important;
+    color: #152C5B !important;
+}
+.ant-menu-submenu-popup .ant-menu-vertical .ant-menu-item {
+    font-size: 13px;
+    font-weight: 600;
+    color: #152C5B;
+    opacity: 60%;
 }

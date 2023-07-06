@@ -13,13 +13,18 @@ const items = [
 ];
 
 function NavbarProfile(props) {
-  const { icon, name, position, picture, className } = props;
+  const { icon, name, position, picture, className, nameID, positionID } = props;
   return (
     <div className="d-flex justify-content-center align-items-center">
-        <div className="me-lg-4 me-md-2 d-flex fs-4">{icon}</div>
+        <div 
+          style={{ color: "#152C5B" }}
+          className="me-lg-4 me-md-2 d-flex fs-4"
+        >
+          {icon}
+        </div>
         <div className={className}>
-            <div id="name" className="h3-bold-size17">{name}</div>
-            <div id="position" className="h5-bold-size13-grey">{position}</div>
+            <div id={nameID} className="h3-bold-size17">{name}</div>
+            <div id={positionID} className="h5-bold-size13-grey">{position}</div>
         </div>
         <div className="mx-lg-3 mx-md-1">
             <img 
