@@ -1,0 +1,19 @@
+
+.profile-text #name {
+    position: absolute;
+    right: 7rem;
+    top: 1.2rem;
+}
+.profile-text #position {
+    position: absolute;
+    right: 9.4rem;
+    top: 2.4rem;
+}
+@media screen and (max-width: 820px) {
+    .profile-text #name {
+        right: 6rem;
+    }
+    .profile-text #position {
+        right: 8.4rem;
+    }
+}

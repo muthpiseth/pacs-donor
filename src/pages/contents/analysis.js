@@ -7,7 +7,7 @@ function Analysis() {
   return (
     <div>
       <NavbarContent title={<span className="h2-bold-size24">Donor Analysis</span>} item="Button" />
-      <Contents content={<DonorAnalysis/>} />
+      <Contents className="p-3" content={<DonorAnalysis/>} />
     </div>
   );
 }

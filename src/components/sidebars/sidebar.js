@@ -71,6 +71,7 @@ const Sidebar = (props) => {
             id="menu"
             theme="light"
             mode="inline"
+            triggerSubMenuAction="click"
             defaultSelectedKeys={["/"]}
             onClick={({ key }) => { 
               navigate(key)
@@ -84,17 +85,17 @@ const Sidebar = (props) => {
                   {
                     key: "/",
                     icon: <UnorderedListOutlined />,
-                    label: <div className="h5-bold-size13">Donor List</div>,
+                    label: collapsed ? "Donor List" : <div className="h5-bold-size13">Donor List</div>,
                   },
                   {
                     key: "/group",
                     icon: <UsergroupAddOutlined />,
-                    label: <div className="h5-bold-size13">Donor Group</div>
+                    label: collapsed ? "Donor Group" : <div className="h5-bold-size13">Donor Group</div>
                   },
                   {
                     key: "/analysis",
                     icon: <LineChartOutlined />,
-                    label: <div className="h5-bold-size13">Donor Analysis</div>
+                    label: collapsed ? "Donor Analysis" : <div className="h5-bold-size13">Donor Analysis</div>
                   }
                 ]
               },
@@ -153,19 +154,22 @@ const Sidebar = (props) => {
               }}
             />
             <div className="d-flex justify-content-between w-100 align-items-center">
-              <div>
-                <Button className="search-button" type="text" icon={<img src={search} alt="" />}><span className="h3-bold-size18-grey">Search</span></Button>
+              <div className="d-flex align-items-center ms-lg-3 ms-md-0">
+                <div>
+                  <img src={search} alt="" />
+                </div>
+                <Button className="d-flex align-items-center search-button h3-bold-size18-grey" type="text">Search</Button>
               </div>
               <div className="d-flex align-items-center me-3">
                 <div className="d-flex align-items-center">
                   <img style={{ height: "1.5rem" }} src={clock} alt="" />
                   <Clock
-                    className="h4-size16 ms-lg-2 ms-md-1"
-                    format={'D / MM / YYYY'}
+                    className="h4-bold-size16 ms-lg-3 ms-md-1"
+                    format={'DD / MM / YYYY'}
                     ticking={true}
                   />
                   <Clock
-                    className="h4-size16 ms-lg-3 ms-md-1"
+                    className="h4-bold-size16 ms-lg-3 ms-md-1"
                     format={'h:mm'}
                     ticking={true}
                   />
@@ -178,6 +182,8 @@ const Sidebar = (props) => {
                 <div className="ms-lg-5 ms-md-2">
                   <NavbarProfile 
                     className="d-flex flex-column justify-content-center align-items-start pofile-name"
+                    nameID="name"
+                    positionID="position"
                     icon={<ScanOutlined />}
                     name="Muth Piseth"
                     position="Reception"
