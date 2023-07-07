@@ -5,8 +5,9 @@ import { Select } from "antd";
 import "./donorList.css";
 import { Pagination } from "antd";
 import { useNavigate } from "react-router-dom";
+import { AiFillCaretDown } from "react-icons/ai";
 const CarddDonorList = () => {
-  const [List_Donor, setUsers] = useState([
+  const ListDonor = [
     {
       id: 1,
       DonorName: "Guy Hawkins",
@@ -25,7 +26,16 @@ const CarddDonorList = () => {
       DonorProgram: "Return Donor program1",
       RegisterDate: "01/02/20231",
     },
-  ]);
+    {
+      id: 3,
+      DonorName: "Guy Hawkins1",
+      DonorID: "D1287S011",
+      DonorState: "Active1",
+      DonorType: "New1",
+      DonorProgram: "Return Donor program1",
+      RegisterDate: "01/02/20231",
+    },
+  ];
   const navigate = useNavigate();
   function DonorState(e) {
     setDonorState(e);
@@ -36,21 +46,21 @@ const CarddDonorList = () => {
   function DonorProgram(e) {
     setDonorProgram(e);
   }
-  const [donorState, setDonorState] = useState("b");
-  const [donorType, setDonorType] = useState("a");
-  const [donorProgram, setDonorProgram] = useState("b");
+  const [donorState, setDonorState] = useState(null);
+  const [donorType, setDonorType] = useState(null);
+  const [donorProgram, setDonorProgram] = useState(null);
 
   return (
     <div>
-      <div className="row">
-        <div className="col-12 col-md-6 col-lg-3">
+      <div className="row  g-3">
+        <div className="col-lg-3 col-md-6 col-sm-6">
           <Input placeholder="Search Donor" prefix={<CiSearch />} />
         </div>
-        <div className="col-12 col-md-6 col-lg-2 d-flex justify-content-end ">
+        <div className="col-lg-2 col-md-6 col-sm-6 d-flex justify-content-end Responsive-Tablet">
           <Select
-            labelInValue={0}
             onChange={DonorState}
             value={donorState}
+            placeholder="Donor State"
             options={[
               {
                 value: "a",
@@ -63,11 +73,15 @@ const CarddDonorList = () => {
             ]}
           />
         </div>
-        <div className="col-12 col-md-6 col-lg-2 d-flex justify-content-center">
+        <div
+          className="col-lg-2 col-md-6 col-sm-6 d-flex Responsive-Tablet"
+          style={{ width: "11%" }}
+        >
           <Select
             labelInValue={0}
             onChange={DonorType}
             value={donorType}
+            placeholder="Donor Type"
             options={[
               {
                 value: "a",
@@ -80,11 +94,12 @@ const CarddDonorList = () => {
             ]}
           />
         </div>
-        <div className="col-12 col-md-6 col-lg-2">
+        <div className="col-lg-2 col-md-6 col-sm-6 d-flex justify-content-start  Responsive-Tablet Responsive-Tablet1">
           <Select
             labelInValue={0}
             onChange={DonorProgram}
             value={donorProgram}
+            placeholder="Donor Program"
             options={[
               {
                 value: "a",
@@ -98,43 +113,53 @@ const CarddDonorList = () => {
           />
         </div>
       </div>
-      <table className="mt-4">
-        <thead className="Header-List h4-size16-grey ">
-          <tr>
-            <th>Donor Name</th>
-            <th>Donor ID</th>
-            <th>Donor State</th>
-            <th>Donor Type </th>
-            <th>Donor Program</th>
-            <th>Register Date </th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {List_Donor.map((item, index) => {
-            return (
-              <tr className="border-botton h5-bold-size13" key={index}>
-                <td>{item.DonorName} </td>
-                <td>{item.DonorID}</td>
-                <td>{item.DonorState}</td>
-                <td>{item.DonorType}</td>
-                <td>{item.DonorProgram}</td>
-                <td>{item.RegisterDate}</td>
-                <td>
-                  <a href="#!" onClick={() => navigate("/cardDonor")}>
-                    View
-                  </a>
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-      <div className="PaginationFrom d-flex justify-content-end mt-3">
+      <div className="my-table ">
+        <table className="mt-4 w-100">
+          <thead className="Header-List h5-bold-size13-grey ">
+            <tr>
+              <th className="p-2 table-left"></th>
+              <th className="row-table">Donor Name</th>
+              <th className="row-table">Donor ID</th>
+              <th className="row-table">Donor State</th>
+              <th className="row-table">Donor Type </th>
+              <th className="row-table">Donor Program</th>
+              <th className="row-table">
+                Register Date <AiFillCaretDown size={19} />
+              </th>
+              <th className="row-table">Action</th>
+              <th className="table-right p-2"></th>
+            </tr>
+          </thead>
+          <tbody>
+            {ListDonor.map((item, index) => {
+              return (
+                <tr className="border-botton h5-bold-size13" key={index}>
+                  <td></td>
+                  <td className="columns-padding">{item.DonorName} </td>
+                  <td className="columns-padding">{item.DonorID}</td>
+                  <td className="columns-padding">{item.DonorState}</td>
+                  <td className="columns-padding">{item.DonorType}</td>
+                  <td className="row-table columns-padding">
+                    {item.DonorProgram}
+                  </td>
+                  <td className="columns-padding">{item.RegisterDate}</td>
+                  <td className="columns-padding">
+                    <a href="#!" onClick={() => navigate("/cardDonor")}>
+                      View
+                    </a>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+      <div className="PaginationFrom d-flex justify-content-end mt-3 ">
         <Pagination
           total={20}
           showSizeChanger
           showQuickJumper
+          defaultCurrent={2}
           showTotal={(total) => `Total ${total} items`}
         />
       </div>

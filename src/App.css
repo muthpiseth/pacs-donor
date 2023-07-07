@@ -49,63 +49,73 @@ body {
     font-weight: 700;
     color: #152C5B;
 }
+
 .h1-bold-size32-grey {
     font-size: 32px;
     font-weight: 700;
     color: #152C5B;
     opacity: 40%;
 }
+
 .h2-bold-size24 {
     font-size: 24px;
     font-weight: 600;
     color: #152C5B;
     opacity: 100%;
 }
+
 .h2-bold-size24-grey {
     font-size: 24px;
     font-weight: 600;
     color: #152C5B;
     opacity: 80%;
 }
+
 .h2-bold-size20 {
     font-size: 20px;
     font-weight: 600;
     color: #152C5B;
 }
+
 .h2-bold-size20-grey {
     font-size: 20px;
     font-weight: 600;
     color: #152C5B;
     opacity: 80%;
 }
+
 .h3-bold-size18 {
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 600;
     color: #152C5B;
-    opacity: 80%;
 }
+
 .h3-bold-size18-grey {
     font-size: 18px;
     font-weight: 600;
     color: #152C5B;
     opacity: 40%;
 }
+
 .h4-bold-size17-weight700 {
     font-size: 17px;
     font-weight: 600;
     color: #152C5B;
 }
+
 .h4-size17 {
     font-size: 17px;
     font-weight: 500;
     color: #152C5B;
 }
+
 .h4-size17-grey {
     font-size: 17px;
     font-weight: 500;
     color: #152C5B;
     opacity: 40%;
 }
+
 .h3-bold-size17 {
     font-size: 17px;
     font-weight: 600;
@@ -118,92 +128,154 @@ body {
     color: #152C5B;
     opacity: 60%;
 }
+
 .h4-bold-size16 {
-    font-size: 17px;
-    font-weight: 600;
-    color: #152C5B;
-    opacity: 80%;
-}
-.h4-bold-size16-grey {
     font-size: 16px;
     font-weight: 600;
     color: #152C5B;
     opacity: 80%;
 }
-.h4-size16{
+
+.h4-bold-size16-grey {
+    font-size: 14px;
+    font-weight: 600;
+    color: #152C5B;
+    opacity: 90%;
+}
+
+.h4-size16 {
     font-size: 16px;
     font-weight: 500;
     color: #152C5B;
 }
+
 .h4-size16-grey {
     font-size: 14px;
     font-weight: 500;
     color: #152C5B;
     opacity: 40%;
 }
+
 .h4-bold-size15 {
     font-size: 15px;
     font-weight: 500;
     color: #152C5B;
+    opacity: 80%;
 }
+
 .h4-bold-size15-grey {
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 14px;
     color: #152C5B;
-    opacity: 60%;
+    opacity: 40%;
 }
+
 .h4-bold-size14 {
     font-size: 14px;
     font-weight: 500;
     color: #152C5B;
-    opacity: 90%;
+    opacity: 80%;
 }
+
 .h4-bold-size14-grey {
     font-size: 14px;
     font-weight: 500;
     color: #152C5B;
     opacity: 80%;
 }
+
 .h5-bold-size13 {
     font-size: 13px;
     font-weight: 600;
     color: #152C5B;
     opacity: 90%;
 }
+
 .h5-bold-size13-grey {
     font-size: 13px;
     font-weight: 600;
     color: #152C5B;
-    opacity: 50%;
+    opacity: 40%;
 }
+
+.h4-bold-size13-grey {
+    font-size: 13px;
+    font-weight: 600;
+    color: #152C5B;
+    opacity: 60%;
+}
+
 .h6-size12 {
     font-size: 12px;
     font-weight: 400;
     color: #152C5B;
 }
+
 .h6-size12-grey {
     font-size: 12px;
     font-weight: 500;
     color: #152C5B;
     opacity: 40%;
 }
+
 .small-size11 {
     font-size: 11px;
     font-weight: 400;
     color: #152C5B;
 }
+
 .small-size11-grey {
     font-size: 11px;
-    font-weight: 400;
+    font-weight: 500;
     color: #152C5B;
     opacity: 40%;
 }
 
-.checkID{
+.checkID {
     border-radius: 7px;
     background-color: #f6f6f9c1 !important;
     border: 2px solid #d9d9d929;
 }
-:where(.css-dev-only-do-not-override-1wazalj).ant-select-dropdown{
+
+:where(.css-dev-only-do-not-override-1wazalj).ant-select-dropdown {
     padding: 0px;
+}
+
+@media only screen and (max-width: 820px) {
+    .ant-pagination-options-quick-jumper {
+        display: none !important;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+    .TextIcon {
+        display: flex;
+        justify-content: space-between !important;
+    }
+
+}
+
+@media only screen and (max-width: 51.25rem) {
+    .Title-none {
+        display: none !important;
+
+    }
+
+}
+
+
+@media only screen and (max-width: 51.25rem) {
+    .Responsive-Tablet {
+        display: flex;
+        justify-content: flex-start !important;
+    }
+
+}
+
+@media only screen and (max-width: 51.25rem) {
+    .Responsive-Tablet1 {
+        padding-left: 40%;
+        width: 50%;
+    }
+
 }
