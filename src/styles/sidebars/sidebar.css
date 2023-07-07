@@ -90,9 +90,9 @@
 #menu .ant-menu-submenu-open li.ant-menu-item {
     left: 1.8%;
 }
-#menu .ant-menu-submenu-open li.ant-menu-item-selected {
+#menu .ant-menu-submenu-open li.ant-menu-item-selected::after {
     border-right: 4px solid #0075FF;
-    left: 1.8%;
+    border-radius: 6.25rem;
 }
 #menu .ant-menu-submenu-title {
     color: #152C5B;
@@ -119,4 +119,9 @@
     font-weight: 600;
     color: #152C5B;
     opacity: 60%;
+}
+
+/* action dropdown when sider small */
+.ant-dropdown-menu-inline-collapsed-tooltip {
+    display: none !important;
 }
