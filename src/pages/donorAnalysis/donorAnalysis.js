@@ -1,104 +1,203 @@
-import React from 'react'
-import { Progress } from 'antd';
+import React from 'react';
 import ReactEcharts from "echarts-for-react";
 import '../../styles/donorAnalysis/donorAnalysis.css'
 import Lines from './lines';
-import { CiWarning } from "react-icons/ci";
+import { GrStatusGoodSmall } from "react-icons/gr";
+import { RiErrorWarningLine } from "react-icons/ri";
 import { AiOutlineSwapRight } from "react-icons/ai";
-import { TbArrowBigUpLineFilled, TbArrowBigDownLineFilled } from "react-icons/tb"
-import Radios from "../../components/radios/radios";
+import { TbArrowBigUpLineFilled, TbArrowBigDownLineFilled } from "react-icons/tb";
 
 export default function DonorAnalysis() {
   const option = {
-    tooltip: {
-      trigger: 'item'
+    grid: {
+      top: "10%",
+      left: "10%",
+      right: "10%",
+      bottom: "10%",
     },
     series: [
       {
-        type: 'pie',
-        radius: ['30%', '70%'],
-        avoidLabelOverlap: false,
-        label: {
-          show: false,
-          position: 'center'
-        },
-        emphasis: {
-          label: {
-            show: true,
-            fontWeight: 'bold'
-          }
-        },
-        labelLine: {
-          show: false
-        },
+        type: "pie",
         data: [
-          { value: 61, name: 'Qualified Donors' },
-          { value: 4, name: 'New Donors' },
-          { value: 28, name: 'Applicants Donors(not lapsed)' },
-          { value: 7, name: 'Applicants Donors' },
-        ]
-      }
-    ]
+          {
+            value: 5,
+            name: "5%",
+            itemStyle: { color: "#FF2C38" },
+          },
+          {
+            value: 30,
+            name: "30%",
+            itemStyle: { color: "#FFA93A" },
+          },
+          {
+            value: 10,
+            name: "10%",
+            itemStyle: { color: "#A05ACE" },
+          },
+          {
+            value: 55,
+            name: "55%",
+            itemStyle: { color: "#427CEC" },
+          },
+        ],
+        itemStyle: {
+          borderColor: "#FFFFFF",
+          borderWidth: 1,
+        },
+        radius: ["30%", "65%"],
+        clockwise: false,
+        label: {
+          normal: {
+            show: false,
+            position: "inside",
+          },
+        },
+      },
+    ],
+    tooltip: {
+      trigger: "item",
+      formatter: "{b}",
+    },
   };
   return (
     <>
-      <div className="back bg-white row">
+      <div className="back p-2 bg-white row">
         <div className="col-lg-3 p-2">
-          <div className="container bg-light bt">
+          <div className="container bg bt">
             <div className="chart d-flex justify-content-center">
-              <div className="text-center mt-5">
+              <div className="text-center mb-2 mar">
                 <h2 className="h2-bold-size24">2319</h2>
                 <h4 className="h4-bold-size16">Total Donors</h4>
               </div>
             </div>
             <div className="chart">
-              <h4 className="h4-bold-size14 p-2">Activeness</h4>
-              <div className="row text-center">
+              <h4 className="h4-bold-size14 p-2 mt-2">Activeness</h4>
+              <div className="row text-center mt-2 mb-2">
                 <div className="col-md-3">
                   <div className="higher">
-                    <Radios />
+                    <GrStatusGoodSmall />
                   </div>
                   <h2 className="h2-bold-size24">463</h2>
                   <h4 className="h4-bold-size14 p-2">(20%)</h4>
                 </div>
                 <div className="col-md-3">
                   <div className="high">
-                    <Radios />
+                    <GrStatusGoodSmall />
                   </div>
                   <h2 className="h2-bold-size24">1109</h2>
                   <h4 className="h4-bold-size14 p-2">(20%)</h4>
                 </div>
                 <div className="col-md-3">
                   <div className="medium">
-                    <Radios />
+                    <GrStatusGoodSmall />
                   </div>
                   <h2 className="h2-bold-size24">484</h2>
                   <h4 className="h4-bold-size14 p-2">(20%)</h4>
                 </div>
                 <div className="col-md-3">
                   <div className="low">
-                    <Radios />
+                    <GrStatusGoodSmall />
                   </div>
                   <h2 className="h2-bold-size24">263</h2>
                   <h4 className="h4-bold-size14 p-2">(20%)</h4>
                 </div>
               </div>
             </div>
-            <div className="mt-4 mb-3">
+            <div className="mt-3 mb-3">
               <small className="small-size11-grey">Donors created from Referral</small>
-              <Progress strokeLinecap="butt" percent={80} size={[250, 19]} />
+              <div style={{ display: "flex" }} className="mt-2">
+                <div
+                  style={{
+                    width: "47%",
+                    height: "1.3rem",
+                    background: "#5287ED",
+                    borderRadius: "0.3rem",
+                  }}
+                ></div>
+                <div className="h3-bold-size17" style={{ margin: "0 0.5rem" }}>627</div>
+                <div className="h4-bold-size14">(47%)</div>
+              </div>
               <small className="small-size11-grey">Donors created from Campaing</small>
-              <Progress strokeLinecap="butt" percent={85} size={[250, 19]} />
+              <div style={{ display: "flex" }} className="mt-2">
+                <div
+                  style={{
+                    width: "21%",
+                    height: "1.3rem",
+                    background: "#5287ED",
+                    borderRadius: "0.3rem",
+                  }}
+                ></div>
+                <div className="h3-bold-size17" style={{ margin: "0 0.5rem" }}>502</div>
+                <div className="h4-bold-size14">(21%)</div>
+              </div>
               <small className="small-size11-grey">Donors created from Other Channel</small>
-              <Progress strokeLinecap="butt" percent={85} size={[250, 19]} />
+              <div style={{ display: "flex" }} className="mt-2">
+                <div
+                  style={{
+                    width: "47%",
+                    height: "1.3rem",
+                    background: "#5287ED",
+                    borderRadius: "0.3rem",
+                  }}
+                ></div>
+                <div className="h3-bold-size17" style={{ margin: "0 0.5rem" }}>1101</div>
+                <div className="h4-bold-size14">(47%)</div>
+              </div>
               <small className="small-size11-grey">Transferred from other Channel</small>
-              <Progress strokeLinecap="butt" percent={50} size={[250, 19]} />
+              <div style={{ display: "flex" }}>
+                <div
+                  style={{
+                    width: "5%",
+                    height: "1.3rem",
+                    background: "#5287ED",
+                    borderRadius: "0.3rem",
+                  }}
+                ></div>
+                <div className="h3-bold-size17" style={{ margin: "0 0.5rem" }}>125</div>
+                <div className="h4-bold-size14">(5%)</div>
+              </div>
             </div>
           </div>
-          <Progress percent={100} success={{ percent: 70, }} size="small" />
+          <div style={{ width: "100%", marginTop: "0.5rem" }}>
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              <div
+                style={{
+                  width: "60%",
+                  height: "0.5rem",
+                  backgroundColor: "#8A9EE0",
+                  borderRadius: "1rem",
+                }}
+              ></div>
+              <div
+                style={{
+                  width: "40%",
+                  height: "0.5rem",
+                  backgroundColor: "#EBA690",
+                  borderRadius: "1rem",
+                  marginLeft: "0.5rem",
+                }}
+              ></div>
+            </div>
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              <small className="h6-size12-grey">Male:60%</small>
+              <small className="h6-size12-grey">Female:40%</small>
+            </div>
+          </div>
         </div>
         <div className="col-lg-3 p-2">
-          <div className="container bg-light bt">
+          <div className="container bg bt">
             <div className="p-2 d-flex justify-content-end"><span className="per">10%</span></div>
             <div className="chart d-flex justify-content-center">
               <div className="text-center mb-2">
@@ -117,8 +216,44 @@ export default function DonorAnalysis() {
               </div>
             </div>
           </div>
-          <Progress percent={50} size="small" />
-          <div className="container bg-light text-dark bt">
+          <div style={{ width: "100%", marginTop: "0.5rem" }}>
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              <div
+                style={{
+                  width: "50%",
+                  height: "0.5rem",
+                  backgroundColor: "#8A9EE0",
+                  borderRadius: "1rem",
+                }}
+              ></div>
+              <div
+                style={{
+                  width: "50%",
+                  height: "0.5rem",
+                  backgroundColor: "#EBA690",
+                  borderRadius: "1rem",
+                  marginLeft: "0.5rem",
+                }}
+              ></div>
+            </div>
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              <small className="h6-size12-grey">Male: 50%</small>
+              <small className="h6-size12-grey">Female: 50%</small>
+            </div>
+          </div>
+          <div className="container bg bt mt-2">
             <div className="chart d-flex justify-content-center mt-5">
               <div className="text-center mb-2">
                 <h2 className="h2-bold-size24">809</h2>
@@ -128,7 +263,7 @@ export default function DonorAnalysis() {
             <div className="col-12 row p-3">
               <div className="col-lg-6 text-center">
                 <h2 className="h2-bold-size24">641</h2>
-                <h4 className="h4-bold-size16">Not Lapsed</h4>
+                <h4 className="h4-bold-size16">NotLapsed</h4>
                 <span className="per">16%</span>
               </div>
               <div className="col-lg-6 text-center">
@@ -138,10 +273,46 @@ export default function DonorAnalysis() {
               </div>
             </div>
           </div>
-          <Progress percent={25} size="small" />
+          <div style={{ width: "100%", marginTop: "0.5rem" }}>
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              <div
+                style={{
+                  width: "50%",
+                  height: "0.5rem",
+                  backgroundColor: "#8A9EE0",
+                  borderRadius: "1rem",
+                }}
+              ></div>
+              <div
+                style={{
+                  width: "50%",
+                  height: "0.5rem",
+                  backgroundColor: "#EBA690",
+                  borderRadius: "1rem",
+                  marginLeft: "0.5rem",
+                }}
+              ></div>
+            </div>
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              <small className="h6-size12-grey">Male: 50%</small>
+              <small className="h6-size12-grey">Female: 50%</small>
+            </div>
+          </div>
         </div>
         <div className="col-lg-3 p-2">
-          <div className="container bg-light text-dark bt">
+          <div className="container bg bt">
             <div className="p-2 d-flex justify-content-end"><span className="per">10%</span></div>
             <div className="chart d-flex justify-content-center">
               <div className="text-center mb-2">
@@ -160,11 +331,47 @@ export default function DonorAnalysis() {
               </div>
             </div>
           </div>
-          <Progress percent={80} size="small" />
-          <div className="bg-light text-dark bt">
-            <div className="text-warning p-2 d-flex justify-content-end"><span className="pers">1.5%</span></div>
+          <div style={{ width: "100%", marginTop: "0.5rem" }}>
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              <div
+                style={{
+                  width: "50%",
+                  height: "0.5rem",
+                  backgroundColor: "#8A9EE0",
+                  borderRadius: "1rem",
+                }}
+              ></div>
+              <div
+                style={{
+                  width: "50%",
+                  height: "0.5rem",
+                  backgroundColor: "#EBA690",
+                  borderRadius: "1rem",
+                  marginLeft: "0.5rem",
+                }}
+              ></div>
+            </div>
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              <small className="h6-size12-grey">Male: 50%</small>
+              <small className="h6-size12-grey">Female: 50%</small>
+            </div>
+          </div>
+          <div className="bg bt mt-2">
+            <div className="p-2 d-flex justify-content-end"><span className="pers">15%</span></div>
             <div className="chart d-flex justify-content-center">
-              <div className="text-center mb-3 mt-1">
+              <div className="text-center mb-2 mt-2">
                 <h2 className="h2-bold-size24">36</h2>
                 <h4 className="h4-bold-size16">Transferred Donors(Out)</h4>
               </div>
@@ -182,10 +389,133 @@ export default function DonorAnalysis() {
               </div>
             </div>
           </div>
-          <Progress percent={90} size="small" />
+          <div style={{ width: "100%", marginTop: "0.5rem" }}>
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              <div
+                style={{
+                  width: "50%",
+                  height: "0.5rem",
+                  backgroundColor: "#8A9EE0",
+                  borderRadius: "1rem",
+                }}
+              ></div>
+              <div
+                style={{
+                  width: "50%",
+                  height: "0.5rem",
+                  backgroundColor: "#EBA690",
+                  borderRadius: "1rem",
+                  marginLeft: "0.5rem",
+                }}
+              ></div>
+            </div>
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              <small className="h6-size12-grey">Male: 50%</small>
+              <small className="h6-size12-grey">Female: 50%</small>
+            </div>
+          </div>
         </div>
+        {/* Chart */}
         <div className="col-lg-3">
           <ReactEcharts option={option} />
+          <div>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                marginLeft: "20%",
+                marginTop: "0.2rem",
+              }}
+            >
+              <div
+                style={{
+                  width: "0.8rem",
+                  height: "0.8rem",
+                  borderRadius: "0.2rem",
+                  backgroundColor: "#427CEC",
+                }}
+              ></div>
+              <div style={{ margin: "0.2rem 0.4rem" }}>
+                {" "}
+                Qualifed Donor -
+              </div>
+              <div>55%</div>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                marginLeft: "20%",
+                marginTop: "0.2rem",
+              }}
+            >
+              <div
+                style={{
+                  width: "0.8rem",
+                  height: "0.8rem",
+                  borderRadius: "0.2rem",
+                  backgroundColor: "#FFA93A",
+                }}
+              ></div>
+              <div style={{ margin: "0.2rem 0.4rem" }}> New Donor -</div>
+              <div>30%</div>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                marginLeft: "20%",
+                marginTop: "0.2rem",
+              }}
+            >
+              <div
+                style={{
+                  width: "0.8rem",
+                  height: "0.8rem",
+                  borderRadius: "0.2rem",
+                  backgroundColor: "#A05ACE",
+                }}
+              ></div>
+              <div style={{ margin: "0.2rem 0.4rem" }}>
+                {" "}
+                Applicants Donors -
+              </div>
+              <div>10%</div>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                marginLeft: "20%",
+              }}
+            >
+              <div
+                style={{
+                  width: "0.8rem",
+                  height: "0.8rem",
+                  borderRadius: "0.2rem",
+                  backgroundColor: "#FF2C38",
+                }}
+              ></div>
+              <div style={{ margin: "0.2rem 0.4rem" }}>
+                {" "}
+                Applicants Donor -
+              </div>
+              <div>5%</div>
+            </div>
+          </div>
         </div>
       </div>
       {/* {line} */}
@@ -196,128 +526,263 @@ export default function DonorAnalysis() {
         <div className="col-lg-3">
           <div className="container mt-5">
             <div className="text-success">New Donor Created</div>
-            <div className="text-info mt-3">New Donor <AiOutlineSwapRight className="text-dark" /> Applicant <TbArrowBigUpLineFilled className="text-dark" /></div>
-            <div className="text-primary mt-4">Qualified <AiOutlineSwapRight className="text-dark" /> lapsed <TbArrowBigUpLineFilled className="text-dark" /> <CiWarning className="text-danger" /></div>
-            <div className="text-danger mt-4">Applicant <AiOutlineSwapRight className="text-dark" /> Qualified <TbArrowBigDownLineFilled className="text-dark" /> <CiWarning /></div>
-            <div className="text-warning mt-4">Donor Transfer Out <TbArrowBigDownLineFilled className="text-dark" /> <CiWarning className="text-danger" /></div>
+            <div className="text-info mt-3">New Donor <AiOutlineSwapRight className="text-dark" /> Applicant <TbArrowBigUpLineFilled className="h4-bold-size15" style={{ fontSize: "24px" }} /></div>
+            <div className="text-primary mt-4">Qualified <AiOutlineSwapRight className="text-dark" /> lapsed <TbArrowBigUpLineFilled className="h4-bold-size15" style={{ fontSize: "24px" }} /> <RiErrorWarningLine className="text-danger" style={{ fontSize: "24px" }} /></div>
+            <div className="text-danger mt-3">Applicant <AiOutlineSwapRight className="text-dark" /> Qualified <TbArrowBigDownLineFilled className="h4-bold-size15" style={{ fontSize: "24px" }} /> <RiErrorWarningLine style={{ fontSize: "24px" }} /></div>
+            <div className="text-warning mt-3">Donor Transfer Out <TbArrowBigDownLineFilled className="h4-bold-size15" style={{ fontSize: "24px" }} /> <RiErrorWarningLine className="text-danger" style={{ fontSize: "24px" }} /></div>
           </div>
         </div>
         <div className="col-lg-3">
-          <div className="container">
-            <div>
-              <h4 className="h4-bold-size15">New Donor <AiOutlineSwapRight /> Applicant Donor</h4>
-              <span className="per">60% ( avarage convert rate)</span>
-            </div>
-            <div className="mt-3">
-              <h4 className="h4-bold-size15">Applicant Donor <AiOutlineSwapRight /> Qualified Donor</h4>
-              <span className="per">70% ( avarage convert rate)</span>
-              <div className="h4-bold-size14-grey"><span className="text-danger"><CiWarning /> Warning : </span>Continous 3 months <TbArrowBigDownLineFilled /></div>
-            </div>
-            <div className="mt-3">
-              <h4 className="h4-bold-size15">Qualified Donor <AiOutlineSwapRight /> Lapsed Donor </h4>
-              <span className="per">10% ( avarage convert rate)</span>
-              <div className="h4-bold-size14-grey"><span className="text-danger"><CiWarning /> Warning : </span>Continous 3 months <TbArrowBigUpLineFilled /></div>
-            </div>
-            <div className="mt-3">
-              <h4 className="h4-bold-size15">Donor Transfer Out 1.5% </h4>
-              <div className="h4-bold-size14-grey"><span className="text-danger"><CiWarning /> Warning : </span>Continous 3 months <TbArrowBigUpLineFilled /></div>
-            </div>
+          <div>
+            <h4 className="h4-bold-size15">New Donor <AiOutlineSwapRight /> Applicant Donor</h4>
+            <span className="per">60% ( avarage convert rate )</span>
+          </div>
+          <div className="mt-3">
+            <h4 className="h4-bold-size15">Applicant Donor <AiOutlineSwapRight /> Qualified Donor</h4>
+            <span className="per">70% ( avarage convert rate )</span>
+            <div className="h4-bold-size14-grey"><span className="text-danger"><RiErrorWarningLine style={{ fontSize: "20px" }} /> Warning : </span>Continous 3 months <TbArrowBigDownLineFilled style={{ fontSize: "20px" }} /></div>
+          </div>
+          <div className="mt-3">
+            <h4 className="h4-bold-size15">Qualified Donor <AiOutlineSwapRight /> Lapsed Donor </h4>
+            <span className="per">10% ( avarage convert rate )</span>
+            <div className="h4-bold-size14-grey"><span className="text-danger"><RiErrorWarningLine style={{ fontSize: "20px" }} /> Warning : </span>Continous 3 months <TbArrowBigUpLineFilled style={{ fontSize: "20px" }} /></div>
+          </div>
+          <div className="mt-3">
+            <h4 className="h4-bold-size15">Donor Transfer Out 1.5% </h4>
+            <div className="h4-bold-size14-grey"><span className="text-danger"><RiErrorWarningLine style={{ fontSize: "20px" }} /> Warning : </span>Continous 3 months <TbArrowBigUpLineFilled style={{ fontSize: "20px" }} /></div>
           </div>
         </div>
       </div>
       {/* progress */}
-      <div className="row mt-3">
-        <div className="col-lg-3 bg-white back p-2">
-          <div className="container">
-            <div className="mt-2">
-            <h4 className="h4-bold-size16">Donor Age Ranges</h4>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          flexWrap: "wrap",
+          justifyContent: "space-between",
+        }}
+      >
+        {[
+          {
+            title: "Donor Age Ranges",
+            content: [
+              { text: "Age 18-22", number: "463", percent: "20%" },
+              { text: "Age 22-30", number: "695", percent: "30%" },
+              { text: "Age 30-50", number: "813", percent: "35%" },
+              { text: "Age 50-70", number: "233", percent: "10%" },
+              { text: "Age 70+", number: "116", percent: "5%" },
+            ],
+          },
+          {
+            title: "Donor Lapsed Time",
+            content: [
+              { text: "Lapsed 140 - 30 days", number: "423", percent: "50%" },
+              { text: "Lapsed 30 - 60 days", number: "255", percent: "30%" },
+              { text: "Lapsed 60 - 90 days", number: "84", percent: "30%" },
+              { text: "Lapsed 120+ days", number: "42", percent: "5%" },
+            ],
+          },
+          {
+            title: "Collect Volume",
+            content: [
+              {
+                text: "0 - 200 ml collection volume",
+                number: "1256",
+                percent: "55%",
+              },
+              {
+                text: "200 - 250 ml collection volume",
+                number: "695",
+                percent: "30%",
+              },
+              {
+                text: "250 - 2300 ml collection volume",
+                number: "395",
+                percent: "10%",
+              },
+            ],
+          },
+          {
+            title: "Donor Programs",
+            content: [
+              { text: "Donor Program 1", number: "1463", percent: "55%" },
+              { text: "Donor Program 2", number: "695", percent: "30%" },
+              { text: "Donor Program 3", number: "347", percent: "15%" },
+              { text: "Donor Program 4", number: "95", percent: "5%" },
+              { text: "Donor Program 5", number: "4200", percent: "80%" },
+            ],
+          },
+        ].map((item, index) => (
+          <div className='col-lg-3'
+            style={{
+              backgroundColor: "#ffffff",
+              borderRadius: "6px",
+              padding: "1rem",
+              marginTop: "1.5rem",
+              width: "24.5%",
+              height: "19rem",
+            }}
+            key={index}
+          >
+            <div className="h3-bold-size17">
+              {item.title}
             </div>
-            <div className="Donor_Programs">
-              <small className="small-size11-grey">Age 18 - 22</small>
-              <Progress strokeLinecap="butt" percent={40} size={[250, 19]} />
-              <small className="small-size11-grey">Age 22 - 30</small>
-              <Progress strokeLinecap="butt" percent={50} size={[250, 19]} />
-              <small className="small-size11-grey">Age 30 - 50</small>
-              <Progress strokeLinecap="butt" percent={60} size={[250, 19]} />
-              <small className="small-size11-grey">Age 50 - 70</small>
-              <Progress strokeLinecap="butt" percent={10} size={[250, 19]} className="prog" />
-              <small className="small-size11-grey">Age 70+</small>
-              <Progress strokeLinecap="butt" percent={7} size={[250, 19]} className="prog" />
-            </div>
+            {item.content.map((items, idx) => (
+              < div key={idx}>
+                <small className="small-size11-grey">
+                  {items.text}
+                </small>
+                <div style={{ display: "flex", margin: "0.2rem 0" }}>
+                  <div
+                    style={{
+                      width: items.percent,
+                      height: "1.2rem",
+                      background: "#5287ED",
+                      borderRadius: "0.3rem",
+                    }}
+                  ></div>
+                  <div className="h4-bold-size14" style={{ margin: "0 0.5rem" }}>
+                    {items.number}
+                  </div>
+                  <div className="h6-size12">({items.percent})</div>
+                </div>
+              </div>
+            ))}
           </div>
-        </div>
-        <div className="col-lg-3 bg-white back p-2">
-          <div className="container">
-            <div className="mt-2">
-            <h4 className="h4-bold-size16">Donor Lapsed Time</h4>
-            </div>
-            <div className="Donor_Programs">
-              <small className="small-size11-grey">Lapsed 14 - 30 days</small>
-              <Progress strokeLinecap="butt" percent={50} size={[250, 19]} />
-              <small className="small-size11-grey">Lapsed 30 - 60 days</small>
-              <Progress strokeLinecap="butt" percent={40} size={[250, 19]} />
-              <small className="small-size11-grey">Lapsed 60 - 90 days</small>
-              <Progress strokeLinecap="butt" percent={10} size={[250, 19]} className="prog" />
-              <small className="small-size11-grey">Lapsed 90 - 120 days</small>
-              <Progress strokeLinecap="butt" percent={5} size={[250, 19]} className="prog" />
-              <small className="small-size11-grey">Lapsed 120+ days</small>
-              <Progress strokeLinecap="butt" percent={5} size={[250, 19]} className="prog" />
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-3 bg-white back p-2">
-          <div className="container">
-            <div className="mt-2">
-            <h4 className="h4-bold-size16">Collect Volume</h4>
-            </div>
-            <div className="Donor_Programs">
-              <small className="small-size11-grey">0 - 200 ml collect volume</small>
-              <Progress strokeLinecap="butt" percent={55} size={[250, 19]} />
-              <small className="small-size11-grey">200 - 250 ml collect volume</small>
-              <Progress strokeLinecap="butt" percent={30} size={[250, 19]} />
-              <small className="small-size11-grey">250 - 2300 ml collect volume</small>
-              <Progress strokeLinecap="butt" percent={15} size={[250, 19]} className="prog" />
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-3 bg-white back p-2">
-          <div className="container">
-            <div className="mt-2">
-            <h4 className="h4-bold-size16">Donor Programs</h4>
-            </div>
-            <div className="Donor_Programs">
-              <small className="small-size11-grey">Donor Program 1</small>
-              <Progress strokeLinecap="butt" percent={45} size={[250, 19]} />
-              <small className="small-size11-grey">Donor Program 2</small>
-              <Progress strokeLinecap="butt" percent={30} size={[250, 19]} />
-              <small className="small-size11-grey">Donor Program 3</small>
-              <Progress strokeLinecap="butt" percent={15} size={[250, 19]} className="prog" />
-              <small className="small-size11-grey">Donor Program 4</small>
-              <Progress strokeLinecap="butt" percent={5} size={[250, 19]} className="prog" />
-              <small className="small-size11-grey">Donor Program 5</small>
-              <Progress strokeLinecap="butt" percent={5} size={[250, 19]} className="prog" />
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
-      <div className="row mt-3">
-        <div className="col-lg-6 bg-white back p-2">
-          <div className="container">
-            <div className="mt-2">
-            <h4 className="h4-bold-size16">Donor Transferred in</h4>
-            <h4 className="h4-bold-size14">Top 3 Transferred Centers</h4>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          flexWrap: "wrap",
+          justifyContent: "space-between",
+        }}
+      >
+        {[
+          {
+            title: "Donors Transferred in",
+            title1: "Top 3 Transferred Centers",
+            title2: "Top 3 Transferred Reason",
+            content1: [
+              { text: "Center name text", number: "50", percent: "50%" },
+              { text: "Centers name text 01", number: "40", percent: "33%" },
+              { text: "Centers name text 02", number: "32", percent: "28%" },
+            ],
+            content2: [
+              { text: "House moving", number: "50", percent: "40%" },
+              { text: "Job change", number: "40", percent: "32%" },
+              { text: "Bad experience in cebter", number: "35", percent: "28%" },
+            ],
+          },
+          {
+            title: "Donors Transferred Out",
+            title1: "Top 3 Transferred Centers",
+            title2: "Top 3 Transferred Reason",
+            content1: [
+              { text: "Centers name text", number: "29", percent: "40%" },
+              { text: "Center name text", number: "7", percent: "20%" },
+            ],
+            content2: [
+              { text: "House moving", number: "463", percent: "20%" },
+              { text: "Bad experience in center", number: "18", percent: "50%" },
+            ],
+          },
+        ].map((item, index) => (
+          <div
+            style={{
+              backgroundColor: "#ffffff",
+              borderRadius: "6px",
+              padding: "1rem",
+              marginTop: "1.5rem",
+              width: "49.65%",
+              height: "15rem",
+            }}
+            key={index}
+          >
+            <div className="h3-bold-size17">
+              {item.title}
             </div>
-            <div className="Donor_Programs">
-              <small className="small-size11-grey">Centers name text</small>
-              <Progress strokeLinecap="butt" percent={40} size={[250, 19]} />
-              <small className="small-size11-grey">Centers name text 01</small>
-              <Progress strokeLinecap="butt" percent={10} size={[250, 19]} className="prog" />
-              <small className="small-size11-grey">Centers name text 02</small>
-              <Progress strokeLinecap="butt" percent={28} size={[250, 19]} className="prog" />
+            <div style={{ display: "flex", marginTop: "0.4rem" }}>
+              <div className="h3-bold-size17"
+                style={{
+                  fontWeight: "600",
+                  fontSize: "1rem",
+                  width: "50%",
+                }}
+              >
+                {item.title1}
+              </div>
+              <div className="h3-bold-size17"
+                style={{
+                  fontWeight: "600",
+                  fontSize: "1rem",
+                  width: "50%",
+                }}
+              >
+                {item.title2}
+              </div>
+            </div>
+            <div style={{ display: "flex" }}>
+              <div style={{ width: "50%" }}>
+                {item.content1.map((items, idx) => (
+                  <div key={idx} style={{ marginTop: "0.4rem" }}>
+                    <small className="small-size11-grey"
+                   
+                    >
+                      {items.text}
+                    </small>
+                    <div style={{ display: "flex", margin: "0.2rem 0" }}>
+                      <div
+                        style={{
+                          width: items.percent,
+                          height: "1.2rem",
+                          background: "#5287ED",
+                          borderRadius: "0.3rem",
+                        }}
+                      ></div>
+                      <div className="h4-bold-size14"
+                        style={{ margin: "0 0.5rem" }}
+                      >
+                        {items.number}
+                      </div>
+                      <div className="h6-size12">
+                        ({items.percent})
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div style={{ width: "50%" }}>
+                {item.content2.map((its, idxs) => (
+                  <div key={idxs} style={{ marginTop: "0.4rem" }}>
+                    <small className="small-size11-grey"   
+                    >
+                      {its.text}
+                    </small>
+                    <div style={{ display: "flex", margin: "0.2rem 0" }}>
+                      <div
+                        style={{
+                          width: its.percent,
+                          height: "1.2rem",
+                          background: "#5287ED",
+                          borderRadius: "0.3rem",
+                        }}
+                      ></div>
+                      <div className="h4-bold-size14"
+                        style={{ margin: "0 0.5rem" }}
+                      >
+                        {its.number}
+                      </div>
+                      <div className="h6-size12">({its.percent})</div>
+                    </div>
+                  </div>
+                ))}{" "}
+              </div>
             </div>
           </div>
-        </div>
+        ))}
       </div>
     </>
   )
-}
+};
