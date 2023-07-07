@@ -53,7 +53,7 @@ import BackgroundButton from "../../components/buttons/backgroundButton";
 
 import Clock from "react-live-clock";
 const CardDonor = () => {
-  const [data, setData] = useState({
+  const [data] = useState({
     item: [
       {
         urlimg: <img src={AppointmentHearder} alt="" />,
@@ -220,36 +220,90 @@ const CardDonor = () => {
         TitleChart: "Legacy Information",
       },
     ],
+    DonorID: [
+      {
+        TextDonor: "Donor ID",
+      },
+      {
+        TextDonor: "Donor State",
+      },
+      {
+        TextDonor: "Donor Status",
+      },
+      {
+        TextDonor: "Donor Type",
+      },
+      {
+        TextDonor: "Donor Program",
+      },
+      {
+        TextDonor: "Register Date",
+      },
+      {
+        TextDonor: "Location",
+      },
+    ],
+    DonorText: [
+      {
+        DonorTable: "D1287S91",
+      },
+      {
+        icon: <GrStatusGoodSmall size={8} color="#21C273" />,
+        DonorTable: "Active",
+      },
+      {
+        DonorTable: "Active Donor",
+      },
+      {
+        DonorTable: "Qualified",
+      },
+      {
+        DonorTable: "Return Donor Program",
+      },
+      {
+        DonorTable: "01 / 03 / 2022",
+      },
+      {
+        DonorTable: "Location text",
+      },
+    ],
   });
   let countCol = 0;
   return (
-    <div className="container mt-5 pt-5 pb-5">
+    <div className="container mt-5 pt-5 pb-5" style={{ padding: "0 110px" }}>
       <a
-        className="h2-bold-size24"
+        className="h2-bold-size20 "
         href="/"
         style={{
           textDecoration: "none",
         }}
       >
-        <h4>
-          <img src={IconBack} alt="" /> View Donor Chart
-        </h4>
+        <div>
+          <img src={IconBack} alt="" className="me-3" />{" "}
+          <span>View Donor Chart</span>
+        </div>
       </a>
-      <div className="row mt-4">
+      <div className="row mt-2 g-4">
         <div className="col-12 col-md-12 col-lg-5  d-inline-flex ">
           <div className="Card-Hawkins p-3">
             <div className="clearfix">
-              <h5 className="float-start h2-bold-size24">Guy Hawkins</h5>
-              <BackgroundButton
-                tittle="Check out"
-                className="float-end11 border border-warning text-warning float-end ms-2"
-                width="7.5rem"
-              />
-              <BackgroundButton
-                tittle="Check-in"
-                className="float-end "
-                width="6.875rem"
-              />
+              <h5 className="float-start h3-bold-size18 ">Guy Hawkins</h5>
+              {data ===
+              (
+                <BackgroundButton
+                  tittle="Check out"
+                  className="float-end11 border-warning text-warning float-end ms-2"
+                  width="7.5rem"
+                />
+              ) ? (
+                ""
+              ) : (
+                <BackgroundButton
+                  tittle="Check-in"
+                  className="float-end "
+                  width="6.875rem"
+                />
+              )}
             </div>
             <div className="Card-Profile d-flex  mt-2">
               <div className="card border-0 me-3">
@@ -258,12 +312,12 @@ const CardDonor = () => {
                   <div className="item-ovrlay">
                     <div>
                       <p className="text-primary">
-                        <AiOutlineCamera size={20} />
+                        <AiOutlineCamera size={18} />
                       </p>
                     </div>
                     <div>
                       <p className="text-primary">
-                        <BsImage size={16} />
+                        <BsImage size={14} />
                       </p>
                     </div>
                   </div>
@@ -271,33 +325,29 @@ const CardDonor = () => {
               </div>
 
               <div className="TitleName float-start  me-3 h6-size12-grey">
-                <h6 className="fs-6">Donor ID</h6>
-                <h6 className="fs-6">Donor State</h6>
-                <h6 className="fs-6">Donor Type</h6>
-                <h6 className="fs-6">Donor Program</h6>
-                <h6 className="fs-6">Register Date</h6>
-                <h6 className="fs-6">Location</h6>
+                {data.DonorID.map((item, index) => (
+                  <p key={index} style={{ marginBottom: "5px" }}>
+                    {item.TextDonor}
+                  </p>
+                ))}
               </div>
-              <div className="h4-bold-size14">
-                <h6 className="fs-6">D129999</h6>
-                <h6 className="fs-6">
-                  <GrStatusGoodSmall size={8} color="#21C273" /> Active
-                </h6>
-                <h6 className="fs-6"> Qualified</h6>
-                <h6 className="fs-6">Return Donor Perogram</h6>
-                <h6 className="fs-6">01 / 03/ 2022</h6>
-                <h6 className="fs-6">Location text</h6>
+              <div className="h4-bold-size14  float-start">
+                {data.DonorText.map((item, index) => (
+                  <p key={index} style={{ marginBottom: "0.1rem" }}>
+                    {item.icon} {item.DonorTable}
+                  </p>
+                ))}
               </div>
             </div>
-            <div className="d-flex align-items-center justify-content-center p-2 TextIcon">
-              <div className="col-lg-4">
+            <div className="d-flex align-items-center justify-content-center  TextIcon">
+              <div className="col-lg-4 ">
                 <div className="Title-Text">
                   <h4 className="ms-5 h2-bold-size24">21</h4>
                   <p className="h4-size16-grey">Collection Count</p>
                 </div>
               </div>
               <div className="col-lg-4">
-                <div className="Title-Text text-center mt-3">
+                <div className="Title-Text text-center mt-2">
                   <h4 className="h2-bold-size24">5</h4>
                   <p className="h4-size16-grey">
                     Days Since <br /> Last Donation
@@ -305,7 +355,7 @@ const CardDonor = () => {
                 </div>
               </div>
               <div className="col-lg-4">
-                <div className="Title-Text text-center mt-3 ">
+                <div className="Title-Text text-center mt-2">
                   <h4 className="h2-bold-size24">1</h4>
                   <p className="h4-size16-grey">
                     Appointments <br /> in 7 days
@@ -314,7 +364,7 @@ const CardDonor = () => {
               </div>
             </div>
             <div
-              className="d-flex p-2"
+              className="d-flex mt-2 "
               style={{ borderBottom: "0.125rem  dashed #ddd" }}
             >
               <div className="col-lg-3">
@@ -322,7 +372,7 @@ const CardDonor = () => {
                   <p className="text-center">
                     <AiFillCheckCircle color="#21C273" size={25} />
                   </p>
-                  <p className="h5-bold-size13-grey">
+                  <p className="small-size11-grey">
                     Last Collection 01/11/2022 200ml
                     <br /> Last payout: $70
                   </p>
@@ -333,7 +383,7 @@ const CardDonor = () => {
                   <p>
                     <AiFillCheckCircle color="#21C273" size={25} />
                   </p>
-                  <p className="h5-bold-size13-grey">
+                  <p className="small-size11-grey">
                     Last Annual <br />
                     Medical Check 02/15/2022
                   </p>
@@ -344,7 +394,7 @@ const CardDonor = () => {
                   <p>
                     <AiFillCheckCircle color="#21C273" size={25} />
                   </p>
-                  <p className="h5-bold-size13-grey ">Serum Exp 01/12/2022</p>
+                  <p className="small-size11-grey">Serum Exp 01/12/2022</p>
                 </div>
               </div>
               <div className="col-lg-3">
@@ -352,18 +402,21 @@ const CardDonor = () => {
                   <p>
                     <AiFillCheckCircle color="#21C273" size={25} />
                   </p>
-                  <p className="h5-bold-size13-grey ">Last Sample 01/12/2022</p>
+                  <p className="small-size11-grey">Last Sample 01/12/2022</p>
                 </div>
               </div>
             </div>
-            <div className="ManIcon">
-              <div className="row  mt-3 h4-bold-size16-grey">
+            <div className="ManIcon ">
+              <div className="row  mt-3 h5-bold-size13   p-2 ">
                 {data.itemIcon.map((item, index) => (
                   <>
                     <div
+                      style={{ padding: 0 }}
                       className={`${countCol++} div-${countCol} ${
-                        countCol === 2 ? "col-lg-6 px-4" : "col-lg-3"
-                      } ${countCol === 3 ? (countCol = 0) : ``}  mb-4`}
+                        countCol === 2
+                          ? "col-lg-6 col-md-4"
+                          : "col-lg-3 col-md-4 "
+                      } ${countCol === 3 ? (countCol = 0) : ``}  mb-3`}
                       key={index}
                     >
                       {item.Texticon} {item.Texttitle}
@@ -381,101 +434,109 @@ const CardDonor = () => {
         </div>
         <div className="col-12 col-md-12 col-lg-7">
           <div className="Card-Eligible p-3 ">
-            <div className="row  text-start justify-content-center align-items-center">
-              <div className="col-lg-3  h6-size12-grey">
-                <h6>
+            <div className="justify-content-between  d-flex">
+              <div className="h6-size12-grey">
+                <div>
                   Next Eligible
                   <br />
                   Donation Date
-                </h6>
+                </div>
               </div>
-              <div className="col-lg-3  d-flex align-items-center">
-                <span className="me-3 h4-bold-size16 ">
+              <div className=" d-flex  justify-content-between hello">
+                <p className="h4-bold-size16 align-items-center  d-flex me-3">
                   <Clock format={"DD / MM / YYYY"} ticking={true} />
-                </span>
-                <span>
+                </p>
+                <p>
                   <img src={Bell} alt="" />
-                </span>
+                </p>
               </div>
-              <div className="col-lg-3 h6-size12-grey">
-                <h6>
+
+              <div className=" h6-size12-grey ">
+                <div>
                   Next Appointment
                   <br />
                   Date
-                </h6>
+                </div>
               </div>
-              <div className="col-lg-3">
-                <span className="me-3 h4-bold-size16 ">
+              <div>
+                <span className="h4-bold-size16 ">
                   <Clock format={"DD / MM / YYYY"} ticking={true} />
                 </span>
                 <br />
-                <span className="h5-bold-size13">
+                <span className="h6-size12">
                   <Clock format={"h:mm:ssa"} ticking={true} />
                 </span>
               </div>
             </div>
-            <div className="row justify-content-center align-items-center  mt-2">
-              <div className="col-lg-6 d-flex">
-                <h5 className="me-2 h3-bold-size18">NOTES</h5>
-                <span
+            <div className="row justify-content-center align-items-center  mt-3">
+              <div className="col-lg-6 col-md-6 d-flex align-items-center">
+                <div className="me-2 h3-bold-size18">NOTES</div>
+                <div
                   className="me-2 text-center"
                   style={{
                     width: "1.563rem",
                     height: "1.25rem",
                     borderRadius: "0.5rem",
-                    background: "blue",
+                    background: "#0075FF",
                     color: "#fff",
                     lineHeight: "1.25rem",
                   }}
                 >
                   2
-                </span>
-                <a style={{ fontSize: "0.938rem" }} href="#!">
+                </div>
+                <a style={{ fontSize: "13px", fontWeight: "500" }} href="#!">
                   More <img src={Moreicon} alt="" />
                 </a>
               </div>
-              <div className="col-lg-6  d-flex  justify-content-end">
+              <div className="col-lg-6 col-md-6 d-flex  justify-content-end ">
                 <BackgroundButton
                   icon={<AiOutlinePlus />}
                   tittle="Add New Notes"
                   txtColor="#152C5B"
-                  className="float-end11 border"
+                  className="float-end11"
                   width="11.875rem"
                 />
               </div>
             </div>
             <div className="Type-Title p-2 mt-3">
-              <tr>
-                <td className="h3-bold-size17-grey">Note Type :</td>
-                <td className="h4-bold-size16">lnjured</td>
-              </tr>
-              <tr>
-                <td className="h3-bold-size17-grey">Notes :</td>
-                <td className="h4-bold-size16">
-                  Notes : Doner letf arm injured
-                </td>
-              </tr>
+              <div className=" d-flex mb-1">
+                <div className="h4-bold-size13-grey">Note Type :</div>
+                <div className="ms-4 h4-bold-size15">lnjured</div>
+              </div>
+              <div className=" d-flex">
+                <div className="h4-bold-size13-grey">Note Type :</div>
+                <div className="ms-4 h4-bold-size15">
+                  Doner letf arm injured
+                </div>
+              </div>
             </div>
-            <div className="Type-Title1 mt-3 p-2">
-              <tr>
-                <td className="h3-bold-size17-grey">Note Type :</td>
-                <td className="h4-bold-size16">Anemai</td>
-              </tr>
-              <tr>
-                <td className="h3-bold-size17-grey">Notes :</td>
-                <td className="h4-bold-size16">
+            <div className="Type-Title1 p-2 mt-3">
+              <div className=" d-flex mb-1">
+                <div className="h4-bold-size13-grey">Note Type :</div>
+                <div className="ms-4 h4-bold-size15">Anemai</div>
+              </div>
+              <div className=" d-flex">
+                <div className="h4-bold-size13-grey row-table1">
+                  Note Type :
+                </div>
+                <div className="ms-4 h4-bold-size15">
                   Donor has symptom of anemia, take care during
-                  <br /> collection
-                </td>
-              </tr>
+                  <br />
+                  collection
+                </div>
+              </div>
             </div>
           </div>
           <div className="Card-Charts mt-4 p-3">
             <h5 className="h3-bold-size18">CHARTS</h5>
-            <div className="row mt-3 h4-bold-size16-grey ">
+            <div className="row  mt-3 h5-bold-size13 ">
               {data.itemChart.map((item, index) => (
                 <>
-                  <div className="col-lg-4  mb-4" key={index}>
+                  <div
+                    style={{ paddingRight: 0 }}
+                    className="col-lg-4  mb-3  col-md-6"
+                    key={index}
+                  >
                     {item.IconChart}
                     <span> {item.TitleChart} </span>
                   </div>
@@ -494,7 +555,7 @@ const CardDonor = () => {
         {data.item.map((MainHeader, index) => (
           <div className="Header-Title h5-bold-size13 " key={index}>
             <div className="mt-2">{MainHeader.urlimg}</div>
-            <p className="mt-2">{MainHeader.texttitle}</p>
+            <p className="mt-2 Title-none">{MainHeader.texttitle}</p>
           </div>
         ))}
       </div>

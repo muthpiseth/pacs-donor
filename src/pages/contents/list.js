@@ -3,6 +3,7 @@ import NavbarContent from "../../components/navbars/navbarContent";
 import Contents from "./contents";
 import CardDonorList from "../donorList/cardDonorList";
 import BackgroundButton from "../../components/buttons/backgroundButton";
+import { AiOutlinePlus } from "react-icons/ai";
 
 function List() {
   return (
@@ -11,6 +12,7 @@ function List() {
         title={<span className="h2-bold-size24">Donor List</span>}
         item={
           <BackgroundButton
+            icon={<AiOutlinePlus />}
             tittle="Create New Donor"
             txtColor="#152C5B"
             className="float-end11 border"
