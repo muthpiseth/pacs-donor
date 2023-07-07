@@ -17,7 +17,7 @@ function NavbarProfile(props) {
   return (
     <div className="d-flex justify-content-center align-items-center">
         <div 
-          style={{ color: "#152C5B" }}
+          style={{ color: "#152C5B", cursor: "pointer" }}
           className="me-lg-4 me-md-2 d-flex fs-4"
         >
           {icon}

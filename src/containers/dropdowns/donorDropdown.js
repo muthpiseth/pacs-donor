@@ -51,10 +51,10 @@ function DonorDropdown(props) {
   return (
     <div>
       <Dropdown
-      overlayStyle={{
-        borderRadius: "0.5rem",
-        border: "1px solid #0075FF"
-      }}
+        overlayStyle={{
+          borderRadius: "0.5rem",
+          border: "1px solid #0075FF"
+        }}
         menu={{
           items,
         }}
