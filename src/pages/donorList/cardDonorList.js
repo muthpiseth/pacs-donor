@@ -35,6 +35,15 @@ const CarddDonorList = () => {
       DonorProgram: "Return Donor program1",
       RegisterDate: "01/02/20231",
     },
+    {
+      id: 4,
+      DonorName: "Guy Hawkins1",
+      DonorID: "D1287S011",
+      DonorState: "Active1",
+      DonorType: "New1",
+      DonorProgram: "Return Donor program1",
+      RegisterDate: "01/02/20231",
+    },
   ];
   const navigate = useNavigate();
   function DonorState(e) {
@@ -49,18 +58,22 @@ const CarddDonorList = () => {
   const [donorState, setDonorState] = useState(null);
   const [donorType, setDonorType] = useState(null);
   const [donorProgram, setDonorProgram] = useState(null);
-
   return (
     <div>
       <div className="row  g-3">
-        <div className="col-lg-3 col-md-6 col-sm-6">
-          <Input placeholder="Search Donor" prefix={<CiSearch />} />
+        <div className="col-lg-3 col-md-6">
+          <Input
+            placeholder="Search Donor"
+            name="search"
+            prefix={<CiSearch />}
+          />
         </div>
-        <div className="col-lg-2 col-md-6 col-sm-6 d-flex justify-content-end Responsive-Tablet">
+        <div className="col-lg-2 col-md-6  d-flex justify-content-end">
           <Select
             onChange={DonorState}
             value={donorState}
             placeholder="Donor State"
+            className="Responsive-Tablet"
             options={[
               {
                 value: "a",
@@ -73,15 +86,12 @@ const CarddDonorList = () => {
             ]}
           />
         </div>
-        <div
-          className="col-lg-2 col-md-6 col-sm-6 d-flex Responsive-Tablet"
-          style={{ width: "11%" }}
-        >
+        <div className="col-lg-2 col-md-6  d-flex justify-content-center">
           <Select
-            labelInValue={0}
             onChange={DonorType}
             value={donorType}
             placeholder="Donor Type"
+            className="Responsive-Tablet"
             options={[
               {
                 value: "a",
@@ -94,12 +104,12 @@ const CarddDonorList = () => {
             ]}
           />
         </div>
-        <div className="col-lg-2 col-md-6 col-sm-6 d-flex justify-content-start  Responsive-Tablet Responsive-Tablet1">
+        <div className="col-lg-2 col-md-6">
           <Select
-            labelInValue={0}
             onChange={DonorProgram}
             value={donorProgram}
             placeholder="Donor Program"
+            className="Responsive-Tablet"
             options={[
               {
                 value: "a",
@@ -133,7 +143,14 @@ const CarddDonorList = () => {
           <tbody>
             {ListDonor.map((item, index) => {
               return (
-                <tr className="border-botton h5-bold-size13" key={index}>
+                <tr
+                  className={
+                    index + 1 === ListDonor.length
+                      ? "h5-bold-size13"
+                      : "  border-botton h5-bold-size13"
+                  }
+                  key={index}
+                >
                   <td></td>
                   <td className="columns-padding">{item.DonorName} </td>
                   <td className="columns-padding">{item.DonorID}</td>

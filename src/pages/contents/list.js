@@ -12,9 +12,11 @@ function List() {
         title={<span className="h2-bold-size24">Donor List</span>}
         item={
           <BackgroundButton
-            icon={<AiOutlinePlus />}
+            icon={<AiOutlinePlus style={{fontWeight: 500, color: "#152C5B" }}/>}
             tittle="Create New Donor"
             txtColor="#152C5B"
+            fontWeigth="500"
+            fontSize="0.875rem"
             className="float-end11 border"
             width="11.25rem"
           />
