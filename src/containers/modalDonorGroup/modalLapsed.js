@@ -8,18 +8,18 @@ const ModalLapsed = (props) => {
         open={isOpen}
         footer={null}
         centered
-        width="37.5rem"
+        width="43.75rem"
         onCancel={handleCancel}
       >
-        <div className="row g-0 px-4 pb-4 d-flex justify-content-center align-items-center">
-          <div className="text-center mb-3 h2-bold-size20">
+        <div className="row g-0  px-5 py-3 pb-4 d-flex justify-content-center align-items-center">
+          <div className="text-center mb-4 h2-bold-size18-weight700 ">
             Create Donor Lapsed Group
           </div>
-          <div className="col-4 d-flex align-items-center justify-content-center h4-bold-size14-grey">
+          <div className="col-4 d-flex align-items-center justify-content-center h5-bold-size13 ">
             Donor Lapsed Group
           </div>
-          <div className="col-8 d-flex align-items-center justify-content-center">
-            <InputNumber className="me-2 inputFont" />
+          <div className="col-8 d-flex align-items-center justify-content-center px-3">
+            <InputNumber className="me-2 inpNumber" style={{ width: "50%" }} />
             <div
               style={{
                 width: "3%",
@@ -27,13 +27,13 @@ const ModalLapsed = (props) => {
                 borderTop: "0.125rem solid #CED0D5",
               }}
             ></div>
-            <InputNumber className="ms-2" />
-            <div className="ms-2 h4-bold-size15-grey">days</div>
+            <InputNumber className="ms-2 inpNumber" style={{ width: "50%" }} />
+            <div className="ms-2 h5-bold-size13-grey">days</div>
+          </div>
+          <div className="d-flex justify-content-center align-items-center mt-4">
+            <BackgroundButton tittle="Submit" width="20rem" height="2.8rem" />
           </div>
         </div>
-        <div className="d-flex justify-content-center align-items-center mb-2">
-          <BackgroundButton tittle="Submit" width="20rem" height="2.8rem" />
-        </div>   
       </Modal>
     </>
   );

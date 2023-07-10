@@ -1,18 +1,14 @@
 .ant-input-number .ant-input-number-handler-wrap {
   display: none;
 }
-.ant-input-number {
-  background-color: #f6f6f9c1 !important;
-  border: 0.125rem solid #d9d9d9;
-  box-shadow: none;
-}
 .ant-input-group-addon {
   border: none !important;
 }
 .ant-textArea {
   border: 0px;
-  background-color: #f6f6f9c1 !important;
+  background-color: #F6F6F966 !important;
   font-size: 1rem !important;
+  border-radius: 0px;
   font-weight: 500;
   color: #152c5b !important;
 }
@@ -23,42 +19,50 @@
   box-shadow: none;
 }
 .textBorder {
-  border: 0.125rem solid #d9d9d9;
+  border: 0.125rem solid #152C5B1A;
   border-top: 0px;
   border-bottom: 0px;
 }
 .btn-add {
-  border: 0.125rem solid #d9d9d9;
-  background-color: #f6f6f9c1 !important;
+  border:  0.125rem solid #152C5B1A;
+  background-color: #F6F6F966 !important;
   border-top: 0px;
   border-bottom-left-radius: 0.625rem;
   border-bottom-right-radius: 0.625rem;
 }
-.ant-input-number-input{
-    font-size: 1rem !important;
-    font-weight: 500;
-    color: #152c5b !important;
+
+:where(.css-dev-only-do-not-override-1wazalj).ant-input-number .ant-input-number-input{
+  font-size: 1rem !important;
+  font-weight: 500;
+  color: #152c5b !important;
 }
-:where(.css-dev-only-do-not-override-1wazalj).ant-input-number:hover{
-   border-color: #d9d9d9;
-   border-inline-end-width: 0.125rem;
+.inpNumber:hover{
+  border-color: #152C5B1A;
+  border-inline-end-width: 0.125rem;
 }
-:where(.css-dev-only-do-not-override-1wazalj).ant-input-number:focus{
-    outline: 0 !important;
+.inpNumber:focus{
+  outline: 0 !important;
 }
+.inpNumber{
+  background-color: #F6F6F966 !important;
+  border: 0.125rem solid #152C5B1A;
+  box-shadow: none;
+}
+/* text type */
 .txtInput{
     font-size: 1rem !important;
     font-weight: 500;
     color: #152c5b !important;
-    background-color: #f6f6f9c1 !important;
+     background-color: #F6F6F966 !important;
+  border: 0.125rem solid #152C5B1A;
     box-shadow: none;
 }
-:where(.css-dev-only-do-not-override-1wazalj).ant-input:hover{
-    border-color: #d9d9d9;
+.txtInput:hover{
+  border-color: #152C5B1A;
    border-inline-end-width: 0.125rem;
 }
-:where(.css-dev-only-do-not-override-1wazalj).ant-input:focus{
-    border-color: #d9d9d9;
+.txtInput:focus{
+  border: 0.125rem solid #152C5B1A;
     box-shadow: none
 }
 /* id */
@@ -77,10 +81,14 @@
 .sub-idDonor{
   width: 23%;
   border-radius: 0.625rem;
-  border: 0.125rem solid #04ae0c9d;
-  background-color:#099e0e05;
+  border: 0.125rem solid #21C273;
+  background-color:#21c2740e;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 /* special modal */
+
+.ant-select-selection-item{
+  display: none;
+}

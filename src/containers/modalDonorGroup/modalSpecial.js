@@ -12,16 +12,16 @@ const ModalSpecial = (props) => {
       <Modal
         open={isOpen}
         centered
-        width="43.75rem"
+        width="46.25rem"
         footer={null}
         onCancel={handleCancel}
       >
-        <div className="px-4">
-          <div className="text-center mb-4 h2-bold-size20">
+        <div className=" px-5 py-3">
+          <div className="text-center mb-4 h2-bold-size18-weight700">
             Create Special Donor Group
           </div>
           <div className="row d-flex align-items-center">
-            <div className="col-3 h4-bold-size15-grey">Group Name</div>
+            <div className="col-3 h4-bold-size15 ">Group Name</div>
             <div className="col-9">
               <Input style={{ width: "100%" }} className="txtInput" />
             </div>
@@ -73,7 +73,7 @@ const ModalSpecial = (props) => {
               <div
                 className="p-2"
                 style={{
-                  border: "0.125rem solid #d9d9d9",
+                  border: " 0.125rem solid #152C5B1A",
                   borderTopRightRadius: "0.625rem",
                   borderTopLeftRadius: "0.625rem",
                 }}
@@ -96,14 +96,14 @@ const ModalSpecial = (props) => {
                   height="1.8rem"
                   bgColor="white"
                   icon={<AiOutlinePlus />}
-                  border="0.125rem solid #d9d9d9"
+                  border="0.125rem solid #152C5B1A"
                   txtColor="#152c5b"
                   borderRadius="0.625rem"
                 />
               </div>
             </div>
           </div>
-          <div className="d-flex justify-content-center align-items-center mt-5">
+          <div className="d-flex justify-content-center align-items-center mt-4">
             <BackgroundButton tittle="Submit" width="20rem" height="2.8rem" />
           </div>
         </div>

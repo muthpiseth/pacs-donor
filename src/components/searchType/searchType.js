@@ -18,16 +18,6 @@ const SearchType = () => (
       {
         value: "2",
         label:(<ListSearch/>)
-      },
-      {
-        value: "3",
-        label:(  <div className="d-flex justify-content-end">
-          <BackgroundButton
-            width="6rem"
-            height="2rem"
-            tittle="Add"
-          />
-        </div> )
       }
     ]}
   />

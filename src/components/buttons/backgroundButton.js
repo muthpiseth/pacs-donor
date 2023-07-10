@@ -13,7 +13,7 @@ const BackgroundButton = (props) => {
             width: width ? width : "14rem",
             height: height ? height : "2.1rem",
             fontWeight: fontWeigth ? fontWeigth : 500,
-            fontSize: fontSize ? fontSize:"0.875",
+            fontSize: fontSize ? fontSize:"1rem",
             backgroundColor: bgColor ? bgColor : "#0075FF",
             border: border ? border : "none",
             outline: outLine ? outLine :"none",
