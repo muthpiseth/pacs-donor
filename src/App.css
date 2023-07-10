@@ -64,6 +64,13 @@ body {
     opacity: 100%;
 }
 
+.h2-bold-size24-w700 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #152C5B;
+    opacity: 100%;
+}
+
 .h2-bold-size24-grey {
     font-size: 24px;
     font-weight: 600;
@@ -71,11 +78,18 @@ body {
     opacity: 80%;
 }
 
+.h2-bold-size20-w700 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #152C5B;
+}
+
 .h2-bold-size20 {
     font-size: 20px;
     font-weight: 600;
     color: #152C5B;
 }
+
 .h2-bold-size20-grey {
     font-size: 20px;
     font-weight: 600;
@@ -88,11 +102,13 @@ body {
     font-weight: 600;
     color: #152C5B;
 }
+
 .h2-bold-size18-weight700 {
     font-size: 18px;
     font-weight: 700;
     color: #152C5B;
 }
+
 .h3-bold-size18-grey {
     font-size: 18px;
     font-weight: 600;
@@ -130,6 +146,13 @@ body {
     font-weight: 600;
     color: #152C5B;
     opacity: 60%;
+}
+
+.h4-bold-size16-w700 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #152C5B;
+    opacity: 80%;
 }
 
 .h4-bold-size16 {
@@ -172,11 +195,32 @@ body {
     opacity: 40%;
 }
 
+.h4-bold-size14-w600 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #152C5B;
+    opacity: 80%;
+}
+
 .h4-bold-size14 {
     font-size: 14px;
     font-weight: 500;
     color: #152C5B;
     opacity: 80%;
+}
+
+.h4-size14-w600 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #152C5B;
+    opacity: 80%;
+}
+
+.h4-size14-grey-w600 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #152C5B;
+    opacity: 60%;
 }
 
 .h4-bold-size14-grey {
@@ -213,11 +257,38 @@ body {
     color: #152C5B;
 }
 
+.h6-size12-w700 {
+    font-size: 12px;
+    font-weight: 700;
+    color: #152C5B;
+    opacity: 80%;
+}
+
+.h6-size12-grey-w700 {
+    font-size: 12px;
+    font-weight: 700;
+    color: #152C5B;
+    opacity: 60%;
+}
+
+.h6-size12-grey-w600 {
+    font-size: 12px;
+    font-weight: 600;
+    color: #152C5B;
+    opacity: 60%;
+}
+
 .h6-size12-grey {
     font-size: 12px;
     font-weight: 500;
     color: #152C5B;
     opacity: 40%;
+}
+
+.small-bold-size11 {
+    font-size: 11px;
+    font-weight: 600;
+    color: #152C5B;
 }
 
 .small-size11 {
@@ -242,7 +313,3 @@ body {
 :where(.css-dev-only-do-not-override-1wazalj).ant-select-dropdown {
     padding: 0px;
 }
-
-
-
-
