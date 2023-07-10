@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import "../../styles/cardDonor/Donor.css";
-import { AiFillCheckCircle, AiOutlinePlus } from "react-icons/ai";
+import {
+  AiFillCheckCircle,
+  AiFillCloseCircle,
+  AiOutlinePlus,
+} from "react-icons/ai";
 import { AiOutlineCamera } from "react-icons/ai";
 import { BsImage } from "react-icons/bs";
 import { GrStatusGoodSmall } from "react-icons/gr";
@@ -228,9 +232,6 @@ const CardDonor = () => {
         TextDonor: "Donor State",
       },
       {
-        TextDonor: "Donor Status",
-      },
-      {
         TextDonor: "Donor Type",
       },
       {
@@ -252,9 +253,6 @@ const CardDonor = () => {
         DonorTable: "Active",
       },
       {
-        DonorTable: "Active Donor",
-      },
-      {
         DonorTable: "Qualified",
       },
       {
@@ -270,7 +268,7 @@ const CardDonor = () => {
   });
   let countCol = 0;
   return (
-    <div className="container mt-5 pt-5 pb-5" style={{ padding: "0 110px" }}>
+    <div className="container mt-5 pt-5 pb-5" style={{ padding: "0 6.875rem" }}>
       <a
         className="h2-bold-size20 "
         href="/"
@@ -279,7 +277,7 @@ const CardDonor = () => {
         }}
       >
         <div>
-          <img src={IconBack} alt="" className="me-3" />{" "}
+          <img src={IconBack} alt="" className="me-3" />
           <span>View Donor Chart</span>
         </div>
       </a>
@@ -339,73 +337,152 @@ const CardDonor = () => {
                 ))}
               </div>
             </div>
-            <div className="d-flex align-items-center justify-content-center  TextIcon">
-              <div className="col-lg-4 ">
-                <div className="Title-Text">
-                  <h4 className="ms-5 h2-bold-size24">21</h4>
-                  <p className="h4-size16-grey">Collection Count</p>
+            {data ===
+            (
+              <div className="d-flex align-items-center justify-content-center  TextIcon">
+                <div className="col-lg-4 ">
+                  <div className="title-text">
+                    <h4 className="ms-5 h2-bold-size24">0</h4>
+                    <p className="small-size11-grey">Collection Count</p>
+                  </div>
+                </div>
+                <div className="col-lg-4">
+                  <div className="title-text text-center mt-2">
+                    <h4 className="h2-bold-size24">0</h4>
+                    <p className="small-size11-grey">
+                      Days Since <br /> Last Donation
+                    </p>
+                  </div>
+                </div>
+                <div className="col-lg-4">
+                  <div className="title-text text-center mt-2">
+                    <h4 className="h2-bold-size24">0</h4>
+                    <p className="small-size11-grey">
+                      Appointments <br /> in 7 days
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div className="col-lg-4">
-                <div className="Title-Text text-center mt-2">
-                  <h4 className="h2-bold-size24">5</h4>
-                  <p className="h4-size16-grey">
-                    Days Since <br /> Last Donation
-                  </p>
+            ) ? (
+              ""
+            ) : (
+              <div className="d-flex align-items-center justify-content-center  TextIcon">
+                <div className="col-lg-4 ">
+                  <div className="title-text">
+                    <h4 className="ms-5 h2-bold-size24">21</h4>
+                    <p className="small-size11-grey">Collection Count</p>
+                  </div>
+                </div>
+                <div className="col-lg-4">
+                  <div className="title-text text-center mt-2">
+                    <h4 className="h2-bold-size24">5</h4>
+                    <p className="small-size11-grey">
+                      Days Since <br /> Last Donation
+                    </p>
+                  </div>
+                </div>
+                <div className="col-lg-4">
+                  <div className="title-text text-center mt-2">
+                    <h4 className="h2-bold-size24">1</h4>
+                    <p className="small-size11-grey">
+                      Appointments <br /> in 7 days
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div className="col-lg-4">
-                <div className="Title-Text text-center mt-2">
-                  <h4 className="h2-bold-size24">1</h4>
-                  <p className="h4-size16-grey">
-                    Appointments <br /> in 7 days
-                  </p>
+            )}
+            {data ===
+            (
+              <div
+                className="d-flex mt-2 "
+                style={{ borderBottom: "0.125rem  dashed #ddd" }}
+              >
+                <div className="col-lg-3">
+                  <div className="">
+                    <p className="text-center">
+                      <AiFillCloseCircle color="red" size={25} />
+                    </p>
+                    <p className="small-size11-grey">
+                      Last Collection 01/11/2022 200ml
+                      <br /> Last payout: $70
+                    </p>
+                  </div>
+                </div>
+                <div className="col-lg-3">
+                  <div className=" text-center ">
+                    <p>
+                      <AiFillCloseCircle color="red" size={25} />
+                    </p>
+                    <p className="small-size11-grey">
+                      Last Annual <br />
+                      Medical Check 02/15/2022
+                    </p>
+                  </div>
+                </div>
+                <div className="col-lg-3">
+                  <div className=" text-center ">
+                    <p>
+                      <AiFillCloseCircle color="red" size={25} />
+                    </p>
+                    <p className="small-size11-grey">Serum Exp 01/12/2022</p>
+                  </div>
+                </div>
+                <div className="col-lg-3">
+                  <div className=" text-center ">
+                    <p>
+                      <AiFillCloseCircle color="red" size={25} />
+                    </p>
+                    <p className="small-size11-grey">Last Sample 01/12/2022</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div
-              className="d-flex mt-2 "
-              style={{ borderBottom: "0.125rem  dashed #ddd" }}
-            >
-              <div className="col-lg-3">
-                <div className="">
-                  <p className="text-center">
-                    <AiFillCheckCircle color="#21C273" size={25} />
-                  </p>
-                  <p className="small-size11-grey">
-                    Last Collection 01/11/2022 200ml
-                    <br /> Last payout: $70
-                  </p>
+            ) ? (
+              ""
+            ) : (
+              <div
+                className="d-flex mt-2 "
+                style={{ borderBottom: "0.125rem  dashed #ddd" }}
+              >
+                <div className="col-lg-3">
+                  <div className="">
+                    <p className="text-center">
+                      <AiFillCheckCircle color="#21C273" size={25} />
+                    </p>
+                    <p className="small-size11-grey">
+                      Last Collection 01/11/2022 200ml
+                      <br /> Last payout: $70
+                    </p>
+                  </div>
+                </div>
+                <div className="col-lg-3">
+                  <div className=" text-center ">
+                    <p>
+                      <AiFillCheckCircle color="#21C273" size={25} />
+                    </p>
+                    <p className="small-size11-grey">
+                      Last Annual <br />
+                      Medical Check 02/15/2022
+                    </p>
+                  </div>
+                </div>
+                <div className="col-lg-3">
+                  <div className=" text-center ">
+                    <p>
+                      <AiFillCheckCircle color="#21C273" size={25} />
+                    </p>
+                    <p className="small-size11-grey">Serum Exp 01/12/2022</p>
+                  </div>
+                </div>
+                <div className="col-lg-3">
+                  <div className=" text-center ">
+                    <p>
+                      <AiFillCheckCircle color="#21C273" size={25} />
+                    </p>
+                    <p className="small-size11-grey">Last Sample 01/12/2022</p>
+                  </div>
                 </div>
               </div>
-              <div className="col-lg-3">
-                <div className=" text-center ">
-                  <p>
-                    <AiFillCheckCircle color="#21C273" size={25} />
-                  </p>
-                  <p className="small-size11-grey">
-                    Last Annual <br />
-                    Medical Check 02/15/2022
-                  </p>
-                </div>
-              </div>
-              <div className="col-lg-3">
-                <div className=" text-center ">
-                  <p>
-                    <AiFillCheckCircle color="#21C273" size={25} />
-                  </p>
-                  <p className="small-size11-grey">Serum Exp 01/12/2022</p>
-                </div>
-              </div>
-              <div className="col-lg-3">
-                <div className=" text-center ">
-                  <p>
-                    <AiFillCheckCircle color="#21C273" size={25} />
-                  </p>
-                  <p className="small-size11-grey">Last Sample 01/12/2022</p>
-                </div>
-              </div>
-            </div>
+            )}
             <div className="ManIcon ">
               <div className="row  mt-3 h5-bold-size13   p-2 ">
                 {data.itemIcon.map((item, index) => (

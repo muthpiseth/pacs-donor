@@ -129,10 +129,10 @@
 .ant-pagination-total-text,
 .ant-select-selection-item,
 .ant-pagination-options-quick-jumper {
-    font-size: 13px;
-    font-weight: 600!important;
-    color: #152C5B;
-    opacity: 90%;
+  font-size: 13px;
+  font-weight: 600 !important;
+  color: #152C5B;
+  opacity: 90%;
 }
 
 .ant-pagination-item-link {
@@ -141,7 +141,7 @@
 }
 
 .ant-pagination-item {
-  border: 1px solid #ddd !important;  
+  border: 1px solid #ddd !important;
   color: #152C5B;
 }
 
@@ -169,4 +169,39 @@
 .columns-padding {
   text-align: left;
   padding: 8px;
+}
+
+.Responsive-Tablet {
+  width: 140px;
+
+}
+
+@media screen and (max-width:768px) {
+  .Responsive-Tablet {
+    width: 100% !important;
+  }
+
+}
+
+@media only screen and (max-width: 820px) {
+  .ant-pagination-options-quick-jumper {
+    display: none !important;
+  }
+
+}
+
+@media only screen and (max-width: 820px) {
+  .TextIcon {
+    display: flex;
+    justify-content: space-between !important;
+  }
+
+}
+
+@media only screen and (max-width: 51.25rem) {
+  .Title-none {
+    display: none !important;
+
+  }
+
 }
