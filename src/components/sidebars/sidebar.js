@@ -56,9 +56,9 @@ const Sidebar = (props) => {
               <DonorDropdown
                 button={
                   <button className="donor-button">
-                    <div className="d-flex text-white justify-content-between align-items-center p-2">
-                      <span className="donor-button-text">Donor</span>
-                      <span className={collapsed ? "d-none" : "donor-button-icon"}><SwapOutlined /></span>
+                    <div className="d-flex text-white justify-content-center align-items-center p-2">
+                      <span className={collapsed ? "d-none" : "donor-button-text me-auto"}>Donor</span>
+                      <span className="donor-button-icon"><SwapOutlined /></span>
                     </div>
                   </button>
                 }
