@@ -1,27 +1,20 @@
 import {
   LineChartOutlined,
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
   ScanOutlined,
-  SwapOutlined,
-  TeamOutlined,
   UnorderedListOutlined,
-  UploadOutlined,
-  UsergroupAddOutlined,
-  VideoCameraOutlined,
 } from '@ant-design/icons';
 import { Button, Layout, Menu, theme } from 'antd';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../styles/sidebars/sidebar.css';
-import logoama from '../../assets/logos/logoama.svg';
-import clock from '../../assets/images/clock.png';
 import men from '../../assets/images/men.jpg';
 import LogoutButton from '../buttons/logoutButton';
 import Clock from 'react-live-clock';
 import NavbarProfile from '../navbars/navbarProfile';
 import DonorDropdown from '../../containers/dropdowns/donorDropdown';
 import { search } from '../../assets/icons/icon';
+import { ClockShape, CollapsedLeft, CollapsedRight, DonorGroup, DonorSetting, Donordropdown, Payout, Reward } from '../../assets/icons/iconSvg';
+import { Logo } from '../../assets/logos/logo';
 
 const { Header, Sider, Content } = Layout;
 const Sidebar = (props) => {
@@ -49,8 +42,8 @@ const Sidebar = (props) => {
       >
         <div>
           <div className="text-center p-1">
-            <div>
-              <img src={logoama} className="logo" alt="" />
+            <div className="mb-3 mt-2">
+              <Logo />
             </div>
             <div>
               <DonorDropdown
@@ -58,7 +51,7 @@ const Sidebar = (props) => {
                   <button className="donor-button">
                     <div className="d-flex text-white justify-content-center align-items-center p-2">
                       <span className={collapsed ? "d-none" : "donor-button-text me-auto"}>Donor</span>
-                      <span className="donor-button-icon"><SwapOutlined /></span>
+                      <span><Donordropdown /></span>
                     </div>
                   </button>
                 }
@@ -79,7 +72,7 @@ const Sidebar = (props) => {
             items={[
               {
                 key: "donor",
-                icon: <TeamOutlined />,
+                icon: <DonorSetting />,
                 label: <div className="h5-bold-size13">Donor</div>,
                 children: [
                   {
@@ -89,7 +82,7 @@ const Sidebar = (props) => {
                   },
                   {
                     key: "/group",
-                    icon: <UsergroupAddOutlined />,
+                    icon: <DonorGroup className="me-2" />,
                     label: collapsed ? "Donor Group" : <div className="h5-bold-size13">Donor Group</div>
                   },
                   {
@@ -101,13 +94,13 @@ const Sidebar = (props) => {
               },
               {
                 key: "payout",
-                icon: <VideoCameraOutlined />,
+                icon: <Payout />,
                 label: <div className="h5-bold-size13">Payout</div>,
                 children: []
               },
               {
                 key: "rewards",
-                icon: <UploadOutlined />,
+                icon: <Reward />,
                 label: <div className="h5-bold-size13">Rewards</div>,
                 children: []
               },
@@ -142,7 +135,7 @@ const Sidebar = (props) => {
               className="bg-white"
               size="small"
               type="text"
-              icon={collapsed ? <MenuUnfoldOutlined style={{ fontSize: "0.7rem" }}/> : <MenuFoldOutlined style={{ fontSize: "0.7rem" }}/>}
+              icon={collapsed ? <CollapsedRight style={{ fontSize: "0.7rem" }}/> : <CollapsedLeft style={{ fontSize: "0.7rem" }}/>}
               onClick={() => setCollapsed(!collapsed)}
               style={{
                 fontSize: "0.1rem",
@@ -162,7 +155,7 @@ const Sidebar = (props) => {
               </div>
               <div className="d-flex align-items-center me-3">
                 <div className="d-flex align-items-center">
-                  <img style={{ height: "1.5rem" }} src={clock} alt="" />
+                  <ClockShape />
                   <Clock
                     className="h4-bold-size16 ms-lg-3 ms-md-1"
                     format={'DD / MM / YYYY'}
@@ -180,7 +173,7 @@ const Sidebar = (props) => {
                   />
                 </div>
                 <div className="ms-lg-5 ms-md-2">
-                  <NavbarProfile 
+                  <NavbarProfile
                     className="d-flex flex-column justify-content-center align-items-start pofile-name"
                     nameID="name"
                     positionID="position"
