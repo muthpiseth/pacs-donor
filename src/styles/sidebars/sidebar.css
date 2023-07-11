@@ -46,11 +46,8 @@
     background: #0075FF;
 }
 .donor-button-text {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 0.8rem;
-}
-.donor-button-icon {
-    display: flex;
 }
 
 /* Menu Part */

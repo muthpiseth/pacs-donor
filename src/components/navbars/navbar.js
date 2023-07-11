@@ -2,13 +2,13 @@ import React from 'react';
 import '../../styles/navbars/navbar.css';
 import NavbarProfile from './navbarProfile';
 import men from '../../assets/images/men.jpg';
-import logoama from '../../assets/logos/logoama.svg';
+import { Logo } from '../../assets/logos/logo';
 
 function Navbar() {
   return (
     <div className="bg-white d-flex justify-content-between align-items-center p-2 fixed-top ">
       <div className="ms-4" >
-        <img style={{ height: "3.5rem", cursor: "pointer" }} src={logoama} alt="" />
+        <Logo />
       </div>
       <div>
         <NavbarProfile
