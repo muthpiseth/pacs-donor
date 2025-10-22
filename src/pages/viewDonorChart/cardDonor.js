@@ -267,6 +267,9 @@ const CardDonor = () => {
     ],
   });
   let countCol = 0;
+  const shoot = (a) => {
+    alert("Hello");
+  }
   return (
     <div className="container mt-5 pt-5 pb-5" style={{ padding: "0 6.875rem" }}>
       <a
@@ -306,7 +309,7 @@ const CardDonor = () => {
             <div className="Card-Profile d-flex  mt-2">
               <div className="card border-0 me-3">
                 <div className="ovrlay">
-                  <img src={Itmeimg} alt="" />
+                  <img src={Itmeimg} alt="" className="mt-2"/>
                   <div className="item-ovrlay">
                     <div>
                       <p className="text-primary">
@@ -315,7 +318,7 @@ const CardDonor = () => {
                     </div>
                     <div>
                       <p className="text-primary">
-                        <BsImage size={14} />
+                        <BsImage size={14}  onClick={shoot} />
                       </p>
                     </div>
                   </div>
@@ -324,7 +327,7 @@ const CardDonor = () => {
 
               <div className="TitleName float-start  me-3 h6-size12-grey">
                 {data.DonorID.map((item, index) => (
-                  <p key={index} style={{ marginBottom: "5px" }}>
+                  <p key={index} style={{ marginBottom: "0.313rem" }}>
                     {item.TextDonor}
                   </p>
                 ))}
@@ -561,7 +564,7 @@ const CardDonor = () => {
                 >
                   2
                 </div>
-                <a style={{ fontSize: "13px", fontWeight: "500" }} href="#!">
+                <a style={{ fontSize: "0.813rem", fontWeight: "500" }} href="#!">
                   More <img src={Moreicon} alt="" />
                 </a>
               </div>
@@ -635,7 +638,7 @@ const CardDonor = () => {
             <p className="mt-2 Title-none">{MainHeader.texttitle}</p>
           </div>
         ))}
-      </div>
+      </div>  
     </div>
   );
 };

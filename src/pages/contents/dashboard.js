@@ -1,11 +1,11 @@
 import React from "react";
 import NavbarContent from "../../components/navbars/navbarContent";
-import Contents from "./contents";
-import CardDonorList from "../donorList/cardDonorList";
+// import Contents from "./contents";
 import BackgroundButton from "../../components/buttons/backgroundButton";
 import { AiOutlinePlus } from "react-icons/ai";
+import Contents from "./contents";
 
-function List() {
+function Dashboard() {
   return (
     <div>
       <NavbarContent
@@ -22,9 +22,14 @@ function List() {
           />
         }
       />
-      <Contents className="bg-white p-3" content={<CardDonorList />} />
+       <div className="bg-white p-3"  style={{
+        minHeight: "49rem",
+        borderRadius: "0.5rem",
+      }}>
+        <div style={{color:"red"}}>sjjsjsjsj</div>
+       </div>
     </div>
   );
 }
 
-export default List;
+export default Dashboard;
